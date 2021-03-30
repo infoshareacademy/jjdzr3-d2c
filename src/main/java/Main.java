@@ -8,7 +8,7 @@ public class Main {
         System.out.println("Drink 2 Code!");
 
 
-        System.out.print("Credits: Agnieszka Gutowska, Artur Zabiegliński,");
+        System.out.print("Credits: Agnieszka Gutowska, Artur Zabiegliński, ");
         System.out.print("Przemysław Pettka, Sandra Kowalska.");
 
 
