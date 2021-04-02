@@ -18,12 +18,10 @@ public class Drink {
     private String strMeasure3;
     private String strMeasure4;
     private String strMeasure5;
-
     private String typeAlcohol; // Drink alkoholowy lub bezalkoholowy - Enum
+
     public Drink() {
     }
-
-
 
     public Drink (Integer drinkID, String strDrink, String strCategory, String strAlcoholic, String strGlass, String strInstructions, String strIngredient1, String strIngredient2, String strIngredient3,String strIngredient4, String strIngredient5, String strMeasure1 , String strMeasure2 , String strMeasure3 , String strMeasure4 , String strMeasure5 ) {
         this.idDrink = drinkID;
@@ -42,8 +40,6 @@ public class Drink {
         this.strMeasure3= strMeasure3;
         this.strMeasure4= strMeasure4;
         this.strMeasure5= strMeasure5;
-
-
     }
 
     @Override

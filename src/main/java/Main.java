@@ -13,15 +13,10 @@ public class Main {
         System.out.println("Created by:");
         System.out.println("Drink 2 Code!");
         System.out.print("Credits: Agnieszka Gutowska, Artur Zabiegliński, ");
-        System.out.print("Przemysław Pettka, Sandra Kowalska.");
+        System.out.println("Przemysław Pettka, Sandra Kowalska. \n");
 
-
-
-        System.out.print("Przemysław Pettka, Sandra Kowalska.\n \n \n" );
-
+        System.out.println("Testowy wynik");
         ObjectMapper objectMapper=new ObjectMapper();
-
-
         File file = new File("src", "onedrink.json");
 
         try {
