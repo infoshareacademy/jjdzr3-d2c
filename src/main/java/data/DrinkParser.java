@@ -14,7 +14,7 @@ import java.util.List;
 
 public class DrinkParser {
 
-    public DrinkRepository readFileIntoListOfDrinks() {
+    public DrinkRepository readFileIntoDrinkRepository() {
         ObjectMapper objectMapper = new ObjectMapper();
 
         Path path = Paths.get("src", "main", "resources", "mDrinks.json");

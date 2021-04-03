@@ -3,7 +3,7 @@ package domain;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public enum GlassType {
-    COCTAIL("Cocktail glass"),
+    COCKTAIL("Cocktail glass"),
     SHOT("Shot glass"),
     OLD_FASHIONED("Old-fashioned glass"),
     COLLINS("Collins glass"),
