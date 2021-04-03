@@ -1,4 +1,5 @@
 import data.DrinkParser;
+import domain.Drink;
 import domain.DrinkRepository;
 
 public class Main {
@@ -14,6 +15,10 @@ public class Main {
         System.out.println("Reading of drinks from json in DrinksRepository");
         DrinkParser drinkParser = new DrinkParser();
         DrinkRepository drinkRepository = drinkParser.readFileIntoListOfDrinks();
+
+        for(Drink drink : drinkRepository.getDrinks()) {
+            System.out.println(drink);
+        }
 
     }
 

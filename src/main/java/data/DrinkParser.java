@@ -19,31 +19,7 @@ public class DrinkParser {
         try {
             DrinkDtoRepository drinks = objectMapper.readValue(file, DrinkDtoRepository.class);
 
-            List<Drink> drinkList = new ArrayList<>();
-            for (DrinkDAO drink : drinks.getDrinks()) {
-
-                List<Ingredient> ingredients = new ArrayList<>();
-                ingredients.add(new Ingredient(drink.getStrIngredient1(), drink.getStrMeasure1()));
-                ingredients.add(new Ingredient(drink.getStrIngredient2(), drink.getStrMeasure2()));
-                ingredients.add(new Ingredient(drink.getStrIngredient3(), drink.getStrMeasure3()));
-                ingredients.add(new Ingredient(drink.getStrIngredient4(), drink.getStrMeasure4()));
-                ingredients.add(new Ingredient(drink.getStrIngredient5(), drink.getStrMeasure5()));
-
-                drinkList.add(new Drink(
-                        drink.getIdDrink(),
-                        drink.getStrDrink(),
-                        drink.getStrCategory(),
-                        drink.getStrGlass(),
-                        drink.getStrInstructions(),
-                        ingredients,
-                        drink.getTypeAlcohol()
-                        )
-                );
-            }
-
-            for(Drink drink : drinkList) {
-                System.out.println(drink);
-            }
+            List<Drink> drinkList = createListOfDrinks(drinks);
 
             return new DrinkRepository(drinkList);
         } catch (IOException e) {
@@ -51,6 +27,31 @@ public class DrinkParser {
         }
 
         return null;
+    }
+
+    private static List<Drink> createListOfDrinks(DrinkDtoRepository drinks) {
+        List<Drink> drinkList = new ArrayList<>();
+        for (DrinkDAO drink : drinks.getDrinks()) {
+
+            List<Ingredient> ingredients = new ArrayList<>();
+            ingredients.add(new Ingredient(drink.getStrIngredient1(), drink.getStrMeasure1()));
+            ingredients.add(new Ingredient(drink.getStrIngredient2(), drink.getStrMeasure2()));
+            ingredients.add(new Ingredient(drink.getStrIngredient3(), drink.getStrMeasure3()));
+            ingredients.add(new Ingredient(drink.getStrIngredient4(), drink.getStrMeasure4()));
+            ingredients.add(new Ingredient(drink.getStrIngredient5(), drink.getStrMeasure5()));
+
+            drinkList.add(new Drink(
+                    drink.getIdDrink(),
+                    drink.getStrDrink(),
+                    drink.getStrCategory(),
+                    drink.getStrGlass(),
+                    drink.getStrInstructions(),
+                    ingredients,
+                    drink.getTypeAlcohol()
+                    )
+            );
+        }
+        return drinkList;
     }
 
     private static class DrinkDtoRepository {
