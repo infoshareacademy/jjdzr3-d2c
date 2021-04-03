@@ -9,7 +9,7 @@ public class Drink {
     private GlassType glassType;
     private String preparationInstruction;
     private List<Ingredient> ingredients;
-    private Type drinkType; // Drink alkoholowy lub bezalkoholowy - Enum
+    private Type drinkType;
 
     public Drink() {
     }

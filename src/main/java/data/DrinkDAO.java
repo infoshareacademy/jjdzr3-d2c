@@ -20,13 +20,13 @@ public class DrinkDAO {
     private String strMeasure3;
     private String strMeasure4;
     private String strMeasure5;
-    private Type typeAlcohol; // Drink alkoholowy lub bezalkoholowy - Enum
+    private Type typeAlcohol;
 
     public DrinkDAO() {
     }
 
-    public DrinkDAO(Integer drinkID, String strDrink, Category strCategory, GlassType strGlass, String strInstructions, String strIngredient1, String strIngredient2, String strIngredient3, String strIngredient4, String strIngredient5, String strMeasure1, String strMeasure2, String strMeasure3, String strMeasure4, String strMeasure5) {
-        this.idDrink = drinkID;
+    public DrinkDAO(Integer idDrink, String strDrink, Category strCategory, GlassType strGlass, String strInstructions, String strIngredient1, String strIngredient2, String strIngredient3, String strIngredient4, String strIngredient5, String strMeasure1, String strMeasure2, String strMeasure3, String strMeasure4, String strMeasure5, Type typeAlcohol) {
+        this.idDrink = idDrink;
         this.strDrink = strDrink;
         this.strCategory = strCategory;
         this.strGlass = strGlass;
@@ -41,6 +41,7 @@ public class DrinkDAO {
         this.strMeasure3 = strMeasure3;
         this.strMeasure4 = strMeasure4;
         this.strMeasure5 = strMeasure5;
+        this.typeAlcohol = typeAlcohol;
     }
 
     @Override
