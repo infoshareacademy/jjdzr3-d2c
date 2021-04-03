@@ -4,8 +4,8 @@ package domain;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public enum Type {
-    ALKOHOL("Non alcoholic"),
-    ALKOHOL_FREE("Alcoholic");
+    ALKOHOL_FREE("Non alcoholic"),
+    ALKOHOL("Alcoholic");
 
     private final String label;
 

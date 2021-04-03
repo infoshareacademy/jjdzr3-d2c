@@ -7,18 +7,21 @@ import domain.Ingredient;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
 public class DrinkParser {
 
     public DrinkRepository readFileIntoListOfDrinks() {
-        ObjectMapper objectMapper=new ObjectMapper();
-        File file = new File("src/main/resources", "mDrinks.json");
+        ObjectMapper objectMapper = new ObjectMapper();
+
+        Path path = Paths.get("src", "main", "resources", "mDrinks.json");
 
         try {
-            DrinkDtoRepository drinks = objectMapper.readValue(file, DrinkDtoRepository.class);
-
+            File file = path.toFile();
+            DrinkDaoRepository drinks = objectMapper.readValue(file, DrinkDaoRepository.class);
             List<Drink> drinkList = createListOfDrinks(drinks);
 
             return new DrinkRepository(drinkList);
@@ -29,7 +32,7 @@ public class DrinkParser {
         return null;
     }
 
-    private static List<Drink> createListOfDrinks(DrinkDtoRepository drinks) {
+    private static List<Drink> createListOfDrinks(DrinkDaoRepository drinks) {
         List<Drink> drinkList = new ArrayList<>();
         for (DrinkDAO drink : drinks.getDrinks()) {
 
@@ -41,23 +44,23 @@ public class DrinkParser {
             ingredients.add(new Ingredient(drink.getStrIngredient5(), drink.getStrMeasure5()));
 
             drinkList.add(new Drink(
-                    drink.getIdDrink(),
-                    drink.getStrDrink(),
-                    drink.getStrCategory(),
-                    drink.getStrGlass(),
-                    drink.getStrInstructions(),
-                    ingredients,
-                    drink.getTypeAlcohol()
+                            drink.getIdDrink(),
+                            drink.getStrDrink(),
+                            drink.getStrCategory(),
+                            drink.getStrGlass(),
+                            drink.getStrInstructions(),
+                            ingredients,
+                            drink.getTypeAlcohol()
                     )
             );
         }
         return drinkList;
     }
 
-    private static class DrinkDtoRepository {
+    private static class DrinkDaoRepository {
         private List<DrinkDAO> drinks;
 
-        public DrinkDtoRepository() {
+        public DrinkDaoRepository() {
         }
 
         public List<DrinkDAO> getDrinks() {
