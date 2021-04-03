@@ -4,7 +4,6 @@ public class Drink {
     private Integer idDrink;
     private String strDrink;
     private String strCategory;
-    private String strAlcoholic;
     private String strGlass;
     private String strInstructions;
     private String strIngredient1;
@@ -17,16 +16,15 @@ public class Drink {
     private String strMeasure3;
     private String strMeasure4;
     private String strMeasure5;
-    private String typeAlcohol; // Drink alkoholowy lub bezalkoholowy - Enum
+    private Type typeAlcohol; // Drink alkoholowy lub bezalkoholowy - Enum
 
     public Drink() {
     }
 
-    public Drink(Integer drinkID, String strDrink, String strCategory, String strAlcoholic, String strGlass, String strInstructions, String strIngredient1, String strIngredient2, String strIngredient3, String strIngredient4, String strIngredient5, String strMeasure1, String strMeasure2, String strMeasure3, String strMeasure4, String strMeasure5) {
+    public Drink(Integer drinkID, String strDrink, String strCategory, String strGlass, String strInstructions, String strIngredient1, String strIngredient2, String strIngredient3, String strIngredient4, String strIngredient5, String strMeasure1, String strMeasure2, String strMeasure3, String strMeasure4, String strMeasure5) {
         this.idDrink = drinkID;
         this.strDrink = strDrink;
         this.strCategory = strCategory;
-        this.strAlcoholic = strAlcoholic;
         this.strGlass = strGlass;
         this.strInstructions = strInstructions;
         this.strIngredient1 = strIngredient1;
@@ -47,7 +45,6 @@ public class Drink {
                 "idDrink=" + idDrink +
                 ", strDrink='" + strDrink + '\'' +
                 ", strCategory='" + strCategory + '\'' +
-                ", strAlcoholic='" + strAlcoholic + '\'' +
                 ", strGlass='" + strGlass + '\'' +
                 ", strInstructions='" + strInstructions + '\'' +
                 ", strIngredient1='" + strIngredient1 + '\'' +
@@ -88,14 +85,6 @@ public class Drink {
         this.strCategory = strCategory;
     }
 
-    public String getStrAlcoholic() {
-        return strAlcoholic;
-    }
-
-    public void setStrAlcoholic(String strAlcoholic) {
-        this.strAlcoholic = strAlcoholic;
-    }
-
     public String getStrGlass() {
         return strGlass;
     }
@@ -128,11 +117,11 @@ public class Drink {
         this.strMeasure1 = strMeasure1;
     }
 
-    public String getTypeAlcohol() {
+    public Type getTypeAlcohol() {
         return typeAlcohol;
     }
 
-    public void setTypeAlcohol(String typeAlcohol) {
+    public void setTypeAlcohol(Type typeAlcohol) {
         this.typeAlcohol = typeAlcohol;
     }
 
