@@ -1,4 +1,4 @@
-package drink;
+package domain;
 
 
 import com.fasterxml.jackson.annotation.JsonValue;

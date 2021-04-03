@@ -1,5 +1,5 @@
-import drink.DrinkParser;
-import drink.DrinkRepository;
+import data.DrinkParser;
+import domain.DrinkRepository;
 
 public class Main {
 
