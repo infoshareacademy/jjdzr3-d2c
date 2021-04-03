@@ -1,10 +1,14 @@
-package drink;
+package data;
 
-public class Drink {
+import domain.Category;
+import domain.GlassType;
+import domain.Type;
+
+public class DrinkDAO {
     private Integer idDrink;
     private String strDrink;
-    private String strCategory;
-    private String strGlass;
+    private Category strCategory;
+    private GlassType strGlass;
     private String strInstructions;
     private String strIngredient1;
     private String strIngredient2;
@@ -18,10 +22,10 @@ public class Drink {
     private String strMeasure5;
     private Type typeAlcohol; // Drink alkoholowy lub bezalkoholowy - Enum
 
-    public Drink() {
+    public DrinkDAO() {
     }
 
-    public Drink(Integer drinkID, String strDrink, String strCategory, String strGlass, String strInstructions, String strIngredient1, String strIngredient2, String strIngredient3, String strIngredient4, String strIngredient5, String strMeasure1, String strMeasure2, String strMeasure3, String strMeasure4, String strMeasure5) {
+    public DrinkDAO(Integer drinkID, String strDrink, Category strCategory, GlassType strGlass, String strInstructions, String strIngredient1, String strIngredient2, String strIngredient3, String strIngredient4, String strIngredient5, String strMeasure1, String strMeasure2, String strMeasure3, String strMeasure4, String strMeasure5) {
         this.idDrink = drinkID;
         this.strDrink = strDrink;
         this.strCategory = strCategory;
@@ -77,19 +81,19 @@ public class Drink {
         this.strDrink = strDrink;
     }
 
-    public String getStrCategory() {
+    public Category getStrCategory() {
         return strCategory;
     }
 
-    public void setStrCategory(String strCategory) {
+    public void setStrCategory(Category strCategory) {
         this.strCategory = strCategory;
     }
 
-    public String getStrGlass() {
+    public GlassType getStrGlass() {
         return strGlass;
     }
 
-    public void setStrGlass(String strGlass) {
+    public void setStrGlass(GlassType strGlass) {
         this.strGlass = strGlass;
     }
 
