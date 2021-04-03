@@ -14,7 +14,7 @@ public class Main {
 
         System.out.println("Reading of drinks from json in DrinksRepository");
         DrinkParser drinkParser = new DrinkParser();
-        DrinkRepository drinkRepository = drinkParser.readFileIntoListOfDrinks();
+        DrinkRepository drinkRepository = drinkParser.readFileIntoDrinkRepository();
 
         for(Drink drink : drinkRepository.getDrinks()) {
             System.out.println(drink);
