@@ -2,17 +2,15 @@ package drink;
 
 public class Drink {
     private Integer idDrink;
-    private String strDrink ;
+    private String strDrink;
     private String strCategory;
-    private  String strAlcoholic;
-    private  String strGlass;
+    private String strGlass;
     private String strInstructions;
-    private  String strInstructionsES;
-    private  String strIngredient1;
-    private  String strIngredient2;
-    private  String strIngredient3;
-    private  String strIngredient4;
-    private  String strIngredient5;
+    private String strIngredient1;
+    private String strIngredient2;
+    private String strIngredient3;
+    private String strIngredient4;
+    private String strIngredient5;
     private String strMeasure1;
     private String strMeasure2;
     private String strMeasure3;
@@ -20,26 +18,24 @@ public class Drink {
     private String strMeasure5;
     private String typeAlcohol; // Drink alkoholowy lub bezalkoholowy - Enum
 
-    public Drink() {
-    }
-
-    public Drink (Integer drinkID, String strDrink, String strCategory, String strAlcoholic, String strGlass, String strInstructions, String strIngredient1, String strIngredient2, String strIngredient3,String strIngredient4, String strIngredient5, String strMeasure1 , String strMeasure2 , String strMeasure3 , String strMeasure4 , String strMeasure5 ) {
+    public Drink(Integer drinkID, String strDrink, String strCategory, String typeAlcohol, String strGlass, String strInstructions, String strIngredient1, String strIngredient2, String strIngredient3, String strIngredient4, String strIngredient5, String strMeasure1, String strMeasure2, String strMeasure3, String strMeasure4, String strMeasure5) {
         this.idDrink = drinkID;
         this.strDrink = strDrink;
-        this.strCategory = strAlcoholic;
-        this.strAlcoholic=strAlcoholic;
-        this.strGlass= strGlass;
-        this.strInstructions= strInstructions;
-        this.strIngredient1= strIngredient1;
-        this.strIngredient2= strIngredient2;
-        this.strIngredient3= strIngredient3;
-        this.strIngredient4= strIngredient4;
-        this.strIngredient5= strIngredient5;
-        this.strMeasure1= strMeasure1;
-        this.strMeasure2= strMeasure2;
-        this.strMeasure3= strMeasure3;
-        this.strMeasure4= strMeasure4;
-        this.strMeasure5= strMeasure5;
+        this.strCategory = strCategory;
+        this.typeAlcohol = typeAlcohol;
+        this.strGlass = strGlass;
+        this.strInstructions = strInstructions;
+        this.strIngredient1 = strIngredient1;
+        this.strIngredient2 = strIngredient2;
+        this.strIngredient3 = strIngredient3;
+        this.strIngredient4 = strIngredient4;
+        this.strIngredient5 = strIngredient5;
+        this.strMeasure1 = strMeasure1;
+        this.strMeasure2 = strMeasure2;
+        this.strMeasure3 = strMeasure3;
+        this.strMeasure4 = strMeasure4;
+        this.strMeasure5 = strMeasure5;
+
     }
 
     @Override
@@ -48,10 +44,9 @@ public class Drink {
                 "idDrink=" + idDrink +
                 ", strDrink='" + strDrink + '\'' +
                 ", strCategory='" + strCategory + '\'' +
-                ", strAlcoholic='" + strAlcoholic + '\'' +
+                ", strAlcoholic='" + typeAlcohol + '\'' +
                 ", strGlass='" + strGlass + '\'' +
                 ", strInstructions='" + strInstructions + '\'' +
-                ", strInstructionsES='" + strInstructionsES + '\'' +
                 ", strIngredient1='" + strIngredient1 + '\'' +
                 ", strIngredient2='" + strIngredient2 + '\'' +
                 ", strIngredient3='" + strIngredient3 + '\'' +
@@ -90,14 +85,6 @@ public class Drink {
         this.strCategory = strCategory;
     }
 
-    public String getStrAlcoholic() {
-        return strAlcoholic;
-    }
-
-    public void setStrAlcoholic(String strAlcoholic) {
-        this.strAlcoholic = strAlcoholic;
-    }
-
     public String getStrGlass() {
         return strGlass;
     }
@@ -112,14 +99,6 @@ public class Drink {
 
     public void setStrInstructions(String strInstructions) {
         this.strInstructions = strInstructions;
-    }
-
-    public String getStrInstructionsES() {
-        return strInstructionsES;
-    }
-
-    public void setStrInstructionsES(String strInstructionsES) {
-        this.strInstructionsES = strInstructionsES;
     }
 
     public String getStrIngredient1() {
