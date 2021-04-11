@@ -123,11 +123,11 @@ public class Menu {
                 int chose = scanner.nextInt();
                 switch (chose) {
                     case 1:
-                        // clr screan @Todo
+                        // TODO: clr screan
                         program = true;
                         break;
                     case 2:
-                        // clr screan @Todo
+                        // TODO: clr screan
                         program = false;
                         break;
                     default:
