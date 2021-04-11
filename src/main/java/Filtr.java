@@ -1,36 +1,52 @@
-import domain.Category;
-import domain.GlassType;
-import domain.Ingredient;
+import data.DrinkParser;
+import domain.Drink;
+import domain.DrinkRepository;
 import domain.Type;
-import menu.MenuEng;
-import menu.MenuPL;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Scanner;
+import java.util.*;
 
 public class Filtr {
 
 // Lista wszystkich [elementów] filtrowana per właściwości
+    //Wcześniej wykonana lista wszystkich elementów powinna zyskać filtry. Możliwość ograniczania wyników względem kategorii lub właściwości.
 public static void main(String[] args) {
-
     Map<Integer, String> menuMap = new HashMap<>();
-    Scanner scanner = new Scanner(System.in);
-    int chose = scanner.nextInt();
-    switch (chose) {
-        case 1:
-            MenuEng menuEng = new MenuEng();
-            menuMap.get(40);
-            menuMap.get(31);    // drinkId;
-            menuMap.get(32);    // drinkName;
-            menuMap.get(33);
-            menuMap.get(34);
-            menuMap.get(35);
-            menuMap.get(36);
-            menuMap.get(36);
-            menuMap.get(03);
+    DrinkParser drinkParser = new DrinkParser();
 
+    DrinkRepository drinkRepository = drinkParser.readFileIntoDrinkRepository();
+    List<Drink> drinks = drinkParser.readFileIntoDrinkRepository().getDrinks();
+
+
+
+
+    System.out.println("Wybierz Filtr: ");
+    System.out.println("T1 - Non alcoholic");
+    System.out.println("T2 - Alcoholic");
+
+
+
+    Scanner scanner = new Scanner(System.in);
+    String chose = scanner.next();
+    switch (chose) {
+        case "T1":
+            drinks.stream()
+                    .filter(drink -> drink.getDrinkType() == Type.ALKOHOL)
+
+                    .forEach(System.out::println);
+                    break;
+        case "T2":
+            drinks.stream()
+            .filter(drink -> drink.getDrinkType() == Type.ALKOHOL_FREE)
+            .forEach(System.out::println);
+            break;
+
+
+
+
+        }
+
+
+/*
             private Integer drinkId;
             private String drinkName;
             private Category drinkCategory;
@@ -38,15 +54,10 @@ public static void main(String[] args) {
             private String preparationInstruction;
             private List<Ingredient> ingredients;
             private Type drinkType;
-
-            break;
-        case 2:
-            MenuPL menuPL = new MenuPL();
-
-            break;
+*/
 
 
-    }
+
 }
 
 
