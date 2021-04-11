@@ -16,7 +16,7 @@ public class Main {
         System.out.println("Przemysław Pettka, Sandra Kowalska. \n");
 
         System.out.println("Testowy wynik");
-        ObjectMapper objectMapper=new ObjectMapper();
+        ObjectMapper objectMapper = new ObjectMapper();
         File file = new File("src", "onedrink.json");
 
         try {
