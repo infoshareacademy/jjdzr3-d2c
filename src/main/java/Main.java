@@ -20,6 +20,9 @@ public class Main {
             System.out.println(drink);
         }
 
+        Search.search(drinkRepository);
+
+
     }
 
 }
