@@ -33,6 +33,15 @@ public class MenuPL {
         this.map.put(34, "4 - Kategoria");
         this.map.put(35, "5 - Alkochol");
         this.map.put(36, "6 - IdDrink");
+        this.map.put(40, "Za pomocą jakiego Filtru, chcesz wyświetlić drinki");
+
+
+
+        this.map.put(90, "Miała być cyfra");
+        this.map.put(91, "Podaj cyfre, a program w końcu zadziała: ");
+        this.map.put(92, "Podałeś niewłaściwy argument");
+        this.map.put(93, "Program zakończy swoje działanie");
+
 
         System.out.println("Walcome in project \"Bartender\'s Handybook\" ");
         System.out.println("Created by:");
@@ -40,9 +49,7 @@ public class MenuPL {
         System.out.print("Credits: Agnieszka Gutowska, Artur Zabiegliński, ");
         System.out.println("Przemysław Pettka, Sandra Kowalska. \n");
 
-        System.out.println("Testowy wynik");
-        ObjectMapper objectMapper = new ObjectMapper();
-        File file = new File("src", "onedrink.json");
+
         return map;
     }
 }

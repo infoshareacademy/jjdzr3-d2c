@@ -38,13 +38,14 @@ public class Menu {
                         menuMap.putAll(menuPL.getMenuPl());
                         break;
                     default:
-                        System.out.println("Podałeś niewłaściwy argument");
-                        System.out.println("Program zakończy swoje działanie");
+                        menuMap.get(92);
+                        menuMap.get(93);
                         break;
                 }
             }catch (Exception e) {
-                System.out.println("Miała być cyfra");
-                System.out.print("Podaj cyfre, a program w końcu zadziała: ");
+                menuMap.get(90);
+                menuMap.get(91);
+
             }
 
             try {
@@ -54,21 +55,20 @@ public class Menu {
                 menuMap.get(12);    //2 - Wyświetl pojedyńczy losowy element z Bazy
                 menuMap.get(13);    //3 - Wyszukaj Drink
                 menuMap.get(14);    //4 - Filtruj wyświetlone Drinki
-                menuMap.get(15);    //5 - Zarządzanie elementami");
-                menuMap.get(16);    //6 - Zarządzanie uczestnikami");
+                menuMap.get(15);    //5 - Zarządzanie elementami
+                menuMap.get(16);    //6 - Zarządzanie uczestnikami
                 menuMap.get(00);
                 Scanner scanner = new Scanner(System.in);
                 int chose = scanner.nextInt();
-
-
-
-
                 switch (chose) {
-                    case 1:
+                    case 1: //1 - Wyświetl wszystkie Elementy z Bazy
+
+
+
                         break;
-                    case 2:
+                    case 2:    //2 - Wyświetl pojedyńczy losowy element z Bazy
                         break;
-                    case 3:
+                    case 3:   //3 - Wyszukaj Drink
                         menuMap.get(30);
                         menuMap.get(31);
                         menuMap.get(32);
@@ -79,23 +79,34 @@ public class Menu {
                         menuMap.get(36);
                         menuMap.get(03);
                         break;
-                    case 4:
+                    case 4: // Za pomocą jakiego Filtru, chcesz wyświetlić drinki");
+                        menuMap.get(40);
+                        menuMap.get(31);
+                        menuMap.get(32);
+                        menuMap.get(33);
+                        menuMap.get(34);
+                        menuMap.get(35);
+                        menuMap.get(36);
+                        menuMap.get(36);
+                        menuMap.get(03);
+                        // uruchom filtrowanie
+
                         break;
-                    case 5:
+                    case 5: // 5 - Zarządzanie elementami
                         break;
-                    case 6:
+                    case 6: //6 - Zarządzanie uczestnikami
                         break;
                     case 0:
                         break;
 
                     default:
-                        System.out.println("Podałeś niewłaściwy argument");
-                        System.out.println("Program zakończy swoje działanie");
+                        menuMap.get(92);
+                        menuMap.get(93);
                         break;
                 }
             }catch (Exception e) {
-                System.out.println("Miała być cyfra");
-                System.out.print("Podaj cyfre, a program w końcu zadziała: ");
+                menuMap.get(90);
+                menuMap.get(91);
             }
 
 
@@ -120,12 +131,14 @@ public class Menu {
                         program = false;
                         break;
                     default:
-
+                        menuMap.get(92);
+                        menuMap.get(93);
+                        break;
                 }
 
             } catch (Exception e) {
-                System.out.println("Miała być cyfra");
-                System.out.print("Podaj cyfre, a program w końcu zadziała: ");
+                menuMap.get(90);
+                menuMap.get(91);
             }
 
 
