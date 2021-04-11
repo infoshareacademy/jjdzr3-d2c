@@ -8,6 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class MenuPL {
+
     Map<Integer, String> map = new HashMap<>();
 
     public Map<Integer, String> getMenuPl() {
@@ -52,4 +53,5 @@ public class MenuPL {
 
         return map;
     }
+
 }
