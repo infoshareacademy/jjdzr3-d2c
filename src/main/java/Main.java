@@ -27,6 +27,11 @@ public class Main {
         for (Drink drink : drinks){
         System.out.println(drink);
         }
+
+
+        Search.search(drinkRepository);
+
+
     }
 
 }
