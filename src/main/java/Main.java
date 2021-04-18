@@ -11,9 +11,9 @@ public class Main {
     public static void main(String[] args) {
         Map<Integer, String> menuMap = new HashMap<>();
         DrinkParser drinkParser = new DrinkParser();
-
         DrinkRepository drinkRepository = drinkParser.readFileIntoDrinkRepository();
         List<Drink> drinks = drinkParser.readFileIntoDrinkRepository().getDrinks();
+
         System.out.println("Welcome in project \"Bartender\'s Handybook\" ");
         System.out.println("Created by:");
         System.out.println("Drink 2 Code!");
@@ -22,14 +22,10 @@ public class Main {
 
         System.out.println(drinks);
         System.out.println("Reading of drinks from json in DrinksRepository");
-        Filtr filtr = new Filtr();
-        drinks=filtr.Filtr(drinks);
-        for (Drink drink : drinks){
-        System.out.println(drink);
-        }
 
 
-        Search.search(drinkRepository);
+
+
 
 
     }

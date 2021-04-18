@@ -1,9 +1,13 @@
-package menu;
-
 import com.fasterxml.jackson.databind.ObjectMapper;
+import data.DrinkParser;
+import domain.Drink;
+import domain.DrinkRepository;
+import menu.MenuEng;
+import menu.MenuPL;
 
 import java.io.File;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 
@@ -12,46 +16,44 @@ public class Menu {
 
     public static void main(String[] args) {
         Map<Integer, String> menuMap = new HashMap<>();
+        DrinkParser drinkParser = new DrinkParser();
 
         System.out.println("Walcome in project \"Bartender\'s Handybook\" ");
         System.out.println("Created by:");
         System.out.println("Drink 2 Code!");
         System.out.print("Credits: Agnieszka Gutowska, Artur Zabiegliński, ");
         System.out.println("Przemysław Pettka, Sandra Kowalska. \n");
-
         System.out.println("Chose Lenguage:");
         System.out.println("1 - For Polish");
         System.out.println("2 - For English");
         boolean program = true;
-        while (program) {
             try {
                 Scanner scanner = new Scanner(System.in);
                 int chose = scanner.nextInt();
                 switch (chose) {
-                    case 1:
-                        MenuEng menuEng = new MenuEng();
-                        menuMap.putAll(menuEng.getMenuEng());
-
-                        break;
-                    case 2:
+                    case 1 -> {
                         MenuPL menuPL = new MenuPL();
                         menuMap.putAll(menuPL.getMenuPl());
-                        break;
-                    default:
-                        System.out.println(menuMap.get(92));
-                        System.out.println(menuMap.get(93));
-                        break;
+                    }
+                    case 2 -> {
+                        MenuEng menuEng = new MenuEng();
+                        menuMap.putAll(menuEng.getMenuEng());
+                    }
+                    default -> {
+                        System.out.println("Podałeś niewłaściwy argument");
+                        System.out.println("Program zakończy swoje działanie");
+                    }
                 }
             }catch (Exception e) {
-
                 System.out.println(menuMap.get(90));
                 System.out.println(menuMap.get(91));
-
             }
-
+        System.out.println(menuMap.get(01));
+        System.out.println(menuMap.get(02));
+        while (program) {
             try {
-                System.out.println(menuMap.get(01));
-                System.out.println(menuMap.get(02));
+                DrinkRepository drinkRepository = drinkParser.readFileIntoDrinkRepository();
+                List<Drink> drinks = drinkParser.readFileIntoDrinkRepository().getDrinks();
                 System.out.println(menuMap.get(11));    //1 - Wyświetl wszystkie Elementy z Bazy
                 System.out.println(menuMap.get(12));    //2 - Wyświetl pojedyńczy losowy element z Bazy
                 System.out.println( menuMap.get(13));    //3 - Wyszukaj Drink
@@ -59,37 +61,28 @@ public class Menu {
                 System.out.println(menuMap.get(15));    //5 - Zarządzanie elementami
                 System.out.println(menuMap.get(16));    //6 - Zarządzanie uczestnikami
                 System.out.println(menuMap.get(00));
+                System.out.println("Wybierz Opcję, którą chcesz uruchomić: ");
                 Scanner scanner = new Scanner(System.in);
                 int chose = scanner.nextInt();
                 switch (chose) {
                     case 1: //1 - Wyświetl wszystkie Elementy z Bazy
-
-
-
+                        for (Drink drink : drinks){
+                            System.out.println(drink);
+                        }
                         break;
                     case 2:    //2 - Wyświetl pojedyńczy losowy element z Bazy
                         break;
                     case 3:   //3 - Wyszukaj Drink
-                        System.out.println(menuMap.get(30));
-                        System.out.println(menuMap.get(31));
-                        System.out.println(menuMap.get(32));
-                        System.out.println(menuMap.get(33));
-                        System.out.println(menuMap.get(34));
-                        System.out.println(menuMap.get(35));
-                        System.out.println(menuMap.get(36));
-                        System.out.println(menuMap.get(36));
-                        System.out.println(menuMap.get(03));
+                        Search.search(drinkRepository);
                         break;
                     case 4: // Za pomocą jakiego Filtru, chcesz wyświetlić drinki");
-                        System.out.println(menuMap.get(40));
-                        System.out.println(menuMap.get(31));
-                        System.out.println(menuMap.get(32));
-                        System.out.println(menuMap.get(33));
-                        System.out.println(menuMap.get(34));
-                        System.out.println(menuMap.get(35));
-                        System.out.println(menuMap.get(36));
-                        System.out.println(menuMap.get(36));
-                        System.out.println(menuMap.get(03));
+                        System.out.println(menuMap.get(4)+"?");
+                        System.out.println(menuMap.get(5));
+                        Filtr filtr = new Filtr();
+                        drinks=filtr.Filtr(drinks);
+                        for (Drink drink : drinks){
+                            System.out.println(drink);
+                        }
                         // uruchom filtrowanie
 
                         break;
@@ -99,7 +92,6 @@ public class Menu {
                         break;
                     case 0:
                         break;
-
                     default:
                         System.out.println(menuMap.get(92));
                         System.out.println(menuMap.get(93));
@@ -109,11 +101,6 @@ public class Menu {
                 System.out.println(menuMap.get(90));
                 System.out.println(menuMap.get(91));
             }
-
-
-
-
-
 
 
             //Ponowne uruchomienie programu
@@ -136,29 +123,16 @@ public class Menu {
                         System.out.println(menuMap.get(93));
                         break;
                 }
-
             } catch (Exception e) {
                 System.out.println(menuMap.get(90));
                 System.out.println(menuMap.get(91));
             }
-
-
         }
-
-
-
-
     }
-
 
     public Map<Integer, String> Credits() {
         Map<Integer, String> map = new HashMap<>();
-
-
         return map;
-
     }
 
-    
-    
 }
