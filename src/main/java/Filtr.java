@@ -1,8 +1,5 @@
 import data.DrinkParser;
-import domain.Drink;
-import domain.DrinkRepository;
-import domain.GlassType;
-import domain.Type;
+import domain.*;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -16,13 +13,14 @@ public  List<Drink> Filtr(List<Drink> drinks) {
 
     System.out.println("Wybierz Filtr: ");
     System.out.println("T1 - Non alcoholic \\\\ T2 - Alcoholic");
-    System.out.println("GT1 - Cocktail glass \\\\ GT2 - Shot glass");
-    System.out.println("Filtr by Letter = ");
+    System.out.println("C1 -Coffee / Tea \\\\ C2 - Cocktail \\\\ C3 - Ordinary Drink \\\\ C4 - Punch / Party Drink \\\\ C5 - Shot ");
+    System.out.println("GT01 - Cocktail glass \\\\ GT02 - Shot glass \\\\ GT03 - Old-fashioned glass \\\\ GT04 - Collins glass \\\\ GT05 - Highball glass");
+    System.out.println("GT06 - Irish coffee cup \\\\ GT07 - Copper Mug \\\\ GT08 - Coffee Mug \\\\ GT09 - Punch bowl \\\\  GT10 - Pint glass\\\\ GT11 - Champagne flute ");
+
+
+
+
 do {
-
-
-
-
 
     Scanner scanner = new Scanner(System.in);
     String chose = scanner.next();
@@ -38,26 +36,86 @@ do {
                     .filter(drink -> drink.getDrinkType() == Type.ALKOHOL)
                     .collect(Collectors.toList());
             break;
-        case "GT1":
+        case "GT01":
             drinks = drinks.stream()
                     .filter(drink -> drink.getGlassType() == GlassType.COCKTAIL)
                     .collect(Collectors.toList());
             break;
-        case "GT2":
+        case "GT02":
             drinks = drinks.stream()
                     .filter(drink -> drink.getGlassType() == GlassType.SHOT)
                     .collect(Collectors.toList());
             break;
-
-/*
-            private Integer drinkId;
-            private String drinkName;
-            private Category drinkCategory;
-            private GlassType glassType;
-            private String preparationInstruction;
-            private List<Ingredient> ingredients;
-            private Type drinkType;
-*/
+        case "GT03":
+            drinks = drinks.stream()
+                    .filter(drink -> drink.getGlassType() == GlassType.OLD_FASHIONED)
+                    .collect(Collectors.toList());
+            break;
+        case "GT04":
+            drinks = drinks.stream()
+                    .filter(drink -> drink.getGlassType() == GlassType.COLLINS)
+                    .collect(Collectors.toList());
+            break;
+        case "GT05":
+            drinks = drinks.stream()
+                    .filter(drink -> drink.getGlassType() == GlassType.HIGHBALL)
+                    .collect(Collectors.toList());
+            break;
+        case "GT06":
+            drinks = drinks.stream()
+                    .filter(drink -> drink.getGlassType() == GlassType.IRISH_COFFEE_CUP)
+                    .collect(Collectors.toList());
+            break;
+        case "GT07":
+            drinks = drinks.stream()
+                    .filter(drink -> drink.getGlassType() == GlassType.COPPER_MUG)
+                    .collect(Collectors.toList());
+            break;
+        case "GT08":
+            drinks = drinks.stream()
+                    .filter(drink -> drink.getGlassType() == GlassType.COFFEE_MUG)
+                    .collect(Collectors.toList());
+            break;
+        case "GT09":
+            drinks = drinks.stream()
+                    .filter(drink -> drink.getGlassType() == GlassType.PUNCH)
+                    .collect(Collectors.toList());
+            break;
+        case "GT10":
+            drinks = drinks.stream()
+                    .filter(drink -> drink.getGlassType() == GlassType.PINT_GLASS)
+                    .collect(Collectors.toList());
+            break;
+        case "GT11":
+            drinks = drinks.stream()
+                    .filter(drink -> drink.getGlassType() == GlassType.CHAMPAGNE_FLUTE)
+                    .collect(Collectors.toList());
+            break;
+        case "C1":
+            drinks = drinks.stream()
+                    .filter(drink -> drink.getDrinkCategory() == Category.COFFEE_OR_TEA)
+                    .collect(Collectors.toList());
+            break;
+        case "C2":
+            drinks = drinks.stream()
+                    .filter(drink -> drink.getDrinkCategory() == Category.COCKTAIL)
+                    .collect(Collectors.toList());
+            break;
+        case "C3":
+            drinks = drinks.stream()
+                    .filter(drink -> drink.getDrinkCategory() == Category.ORDINARY_DRINK)
+                    .collect(Collectors.toList());
+            break;
+        case "C4":
+            drinks = drinks.stream()
+                    .filter(drink -> drink.getDrinkCategory() == Category.PARTY_DRINK_OR_PUNCH)
+                    .collect(Collectors.toList());
+            break;
+        case "C5":
+            drinks = drinks.stream()
+                    .filter(drink -> drink.getDrinkCategory() == Category.SHOT)
+                    .collect(Collectors.toList());
+            break;
 
 
     }
