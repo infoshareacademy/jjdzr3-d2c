@@ -11,41 +11,26 @@ public class MenuEng {
 
     Map<Integer, String> map = new HashMap<>();
 
-
-
     public Map<Integer, String> getMenuEng() {
-        this.map.put(01, "Witamy w Menu programie \"Bartender\'s Handybook\"");
-        this.map.put(02, "Jest w nim kilka opcji do przetestowania");
-        this.map.put(11, "1 - Wyświetl wszystkie Elementy z Bazy");
-        this.map.put(12, "2 - Wyświetl pojedyńczy losowy element z Bazy");
-        this.map.put(13, "3 - Wyszukaj Drink");
-        this.map.put(14, "4 - Filtruj wyświetlone Drinki");
-        this.map.put(15, "5 - Zarządzanie elementami");
-        this.map.put(16, "6 - Zarządzanie uczestnikami");
-        //this.map.put(17, "7 - Miejsce do uzupełnienia");
-        //this.map.put(18, "8 - Miejsce do uzupełnienia");
-        //this.map.put(19, "9 - Miejsce do uzupełnienia");
-        this.map.put(00, "0 - Koniec");
-
-
-        //this.map.put(13, "3 - Wyszukaj Drink");
-        this.map.put(30, "Za pomocą jakiego Filtru chcesz wyszukać:");
-        this.map.put(31, "1 - Nazwa");
-        this.map.put(32, "2 - Składnik");
-        this.map.put(33, "3 - Szklanka");
-        this.map.put(34, "4 - Kategoria");
-        this.map.put(35, "5 - Alkochol");
-        this.map.put(36, "6 - IdDrink");
-
-        System.out.println("Walcome in project \"Bartender\'s Handybook\" ");
-        System.out.println("Created by:");
-        System.out.println("Drink 2 Code!");
-        System.out.print("Credits: Agnieszka Gutowska, Artur Zabiegliński, ");
-        System.out.println("Przemysław Pettka, Sandra Kowalska. \n");
-
-        System.out.println("Testowy wynik");
-        ObjectMapper objectMapper = new ObjectMapper();
-        File file = new File("src", "onedrink.json");
+        this.map.put(01, "Hello in Program: \"Bartender\'s Handybook\"");
+        this.map.put(02, "This program have a faw options to test");
+        this.map.put(05, "Chose one of them from list: ");
+        this.map.put(11, "1 - Show all Drinks from data base");
+        this.map.put(12, "2 - Show random Drink from data base");
+        this.map.put(13, "3 - Search drink, by name");
+        this.map.put(14, "4 - Filtrs the drink data base");
+        this.map.put(15, "5 - Management of database elements");
+        this.map.put(16, "6 - user management" );
+        this.map.put(00, "0 - End");
+        this.map.put(40, "Chose Filtrs to search in drink Database");
+        this.map.put(41, "Chose Filtrs: ");
+        this.map.put(20, "Continue search Y/N?");
+        this.map.put(90, "Please, enter number");
+        this.map.put(91, "Enter number and app will be work proply: ");
+        this.map.put(92, "Wrong input");
+        this.map.put(93, "Program will finish work");
+        this.map.put(94, "Do you want run program again?");
+        this.map.put(95, "Enter \"1\" if yes");
         return map;
     }
 

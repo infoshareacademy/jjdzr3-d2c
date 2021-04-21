@@ -10,7 +10,6 @@ public class Filtr {
     //Wcześniej wykonana lista wszystkich elementów powinna zyskać filtry. Możliwość ograniczania wyników względem kategorii lub właściwości.
 public  List<Drink> Filtr(List<Drink> drinks) {
     boolean filtrsWhile = true;
-    System.out.println("Wybierz Filtr: ");
     System.out.println("T1 - Non alcoholic \\\\ T2 - Alcoholic");
     System.out.println("C1 -Coffee / Tea \\\\ C2 - Cocktail \\\\ C3 - Ordinary Drink \\\\ C4 - Punch / Party Drink \\\\ C5 - Shot ");
     System.out.println("GT01 - Cocktail glass \\\\ GT02 - Shot glass \\\\ GT03 - Old-fashioned glass \\\\ GT04 - Collins glass \\\\ GT05 - Highball glass");
