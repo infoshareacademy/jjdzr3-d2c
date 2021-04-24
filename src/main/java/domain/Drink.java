@@ -89,4 +89,7 @@ public class Drink {
         this.drinkType = drinkType;
     }
 
+    public void setIngredients(List<Ingredient> ingredients) {
+        this.ingredients = ingredients;
+    }
 }

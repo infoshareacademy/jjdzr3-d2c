@@ -2,9 +2,11 @@ import data.DrinkParser;
 import domain.Drink;
 import domain.DrinkRepository;
 
+import java.io.IOException;
+
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
         System.out.println("Welcome in project \"Bartender\'s Handybook\" ");
         System.out.println("Created by:");
@@ -19,7 +21,7 @@ public class Main {
         for(Drink drink : drinkRepository.getDrinks()) {
             System.out.println(drink);
         }
-
+        AddDrink.addDrink();
         Search.search(drinkRepository);
 
 

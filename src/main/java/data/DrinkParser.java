@@ -17,7 +17,8 @@ public class DrinkParser {
     public DrinkRepository readFileIntoDrinkRepository() {
         ObjectMapper objectMapper = new ObjectMapper();
 
-        Path path = Paths.get("src", "main", "resources", "mDrinks.json");
+      //  Path path = Paths.get("src", "main", "resources", "mDrinks.json");
+        Path path = Paths.get("src", "main", "resources", "mDrinkstest.json");
 
         try {
             File file = path.toFile();
