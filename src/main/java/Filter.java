@@ -4,7 +4,7 @@ import domain.*;
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class Filtr {
+public class Filter {
 
 // Lista wszystkich [elementów] filtrowana per właściwości
     //Wcześniej wykonana lista wszystkich elementów powinna zyskać filtry. Możliwość ograniczania wyników względem kategorii lub właściwości.

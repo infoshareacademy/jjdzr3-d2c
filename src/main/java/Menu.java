@@ -1,19 +1,13 @@
-import com.fasterxml.jackson.databind.ObjectMapper;
 import data.DrinkParser;
 import domain.Drink;
 import domain.DrinkRepository;
 import menu.MenuEng;
 import menu.MenuPL;
 
-import java.awt.*;
-import java.io.File;
-import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
-
-import java.awt.event.KeyEvent;
 
 
 public class Menu {
@@ -101,8 +95,8 @@ public class Menu {
                     case 4: // Za pomocą jakiego Filtru, chcesz wyświetlić drinki");
                         System.out.println(menuMap.get(40));
                         System.out.println(menuMap.get(41));
-                        Filtr filtr = new Filtr();
-                        drinks=filtr.Filtr(drinks);
+                        Filter filter = new Filter();
+                        drinks= filter.Filtr(drinks);
                         for (Drink drink : drinks){
                             System.out.println(drink);
                         }
@@ -183,4 +177,3 @@ public static void clearScreen() {
 
 
 
-}
