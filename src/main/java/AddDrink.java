@@ -1,25 +1,24 @@
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.util.JSONPObject;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 import data.DrinkParser;
 import domain.*;
 
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public abstract class AddDrink {
 
     public static void addDrink() throws IOException {
 
-        DrinkParser drinkParser = new DrinkParser();
-        DrinkRepository drinkRepository = drinkParser.readFileIntoDrinkRepository();
+
         Drink drink = new Drink();
 
         System.out.println("How many drinks you want to add? :");
@@ -103,16 +102,18 @@ public abstract class AddDrink {
                 drink.setDrinkType(Type.ALKOHOL_FREE);
             }
 
+            DrinkParser drinkParser = new DrinkParser();
+            DrinkRepository drinkRepository = drinkParser.readFileIntoDrinkRepository();
+
+
+
+
             //parsing to json file, add object to file
             Path path = Paths.get("src", "main", "resources", "mDrinkstest.json");
             ObjectMapper objectMapper = new ObjectMapper();
             String objectAsString = null;
             try {
-                //  objectAsString = objectMapper.writeValueAsString(drink);
-                //  objectMapper.writeValue(file, objectAsString);
                 objectAsString = objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(drink);
-                // objectMapper.writeValue(file, objectAsString);
-
                 Files.write(new File(String.valueOf(path)).toPath(), Arrays.asList(objectAsString), StandardOpenOption.APPEND);
             } catch (JsonProcessingException e) {
                 e.printStackTrace();
@@ -120,6 +121,11 @@ public abstract class AddDrink {
             System.out.println(objectAsString);
 
 
+
+
+        }
+
+
         }
     }
-}
+
