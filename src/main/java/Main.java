@@ -14,15 +14,8 @@ public class Main {
         DrinkRepository drinkRepository = drinkParser.readFileIntoDrinkRepository();
         List<Drink> drinks = drinkParser.readFileIntoDrinkRepository().getDrinks();
 
-        System.out.println("Welcome in project \"Bartender\'s Handybook\" ");
-        System.out.println("Created by:");
-        System.out.println("Drink 2 Code!");
-        System.out.print("Credits: Agnieszka Gutowska, Artur Zabiegliński, ");
-        System.out.println("Przemysław Pettka, Sandra Kowalska. \n");
-
-        System.out.println(drinks);
-        System.out.println("Reading of drinks from json in DrinksRepository");
-
+        Menu menu = new Menu();
+        menu.Menu();
 
 
 

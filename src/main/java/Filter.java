@@ -9,7 +9,7 @@ public class Filter {
 // Lista wszystkich [elementów] filtrowana per właściwości
     //Wcześniej wykonana lista wszystkich elementów powinna zyskać filtry. Możliwość ograniczania wyników względem kategorii lub właściwości.
 public  List<Drink> Filtr(List<Drink> drinks) {
-    boolean filtrsWhile = true;
+    boolean filtersloop = true;
     System.out.println("T1 - Non alcoholic \\\\ T2 - Alcoholic");
     System.out.println("C1 -Coffee / Tea \\\\ C2 - Cocktail \\\\ C3 - Ordinary Drink \\\\ C4 - Punch / Party Drink \\\\ C5 - Shot ");
     System.out.println("GT01 - Cocktail glass \\\\ GT02 - Shot glass \\\\ GT03 - Old-fashioned glass \\\\ GT04 - Collins glass \\\\ GT05 - Highball glass");
@@ -110,18 +110,21 @@ do {
                     .filter(drink -> drink.getDrinkCategory() == Category.SHOT)
                     .collect(Collectors.toList());
             break;
+        default:
+            System.out.println("Sorry, program doesn't have this filter: "+chose);
+            break;
     }
     System.out.println("Chcesz dodać kolejny Filtr? Y/N?");
     scanner = new Scanner(System.in);
     chose = scanner.next();
     if (chose.equals("Y") || chose.equals("T")){
-        filtrsWhile=true;
+        filtersloop=true;
         System.out.print("Który Filtr?: ");
     } else {
-        filtrsWhile=false;
+        filtersloop=false;
     }
-} while (filtrsWhile);
+    } while (filtersloop);
     return drinks;
-}
+    }
 
-}
+    }

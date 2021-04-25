@@ -1,9 +1,5 @@
 package menu;
 
-
-import com.fasterxml.jackson.databind.ObjectMapper;
-
-import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -27,20 +23,11 @@ public class MenuPL {
         this.map.put(00, "0 - Koniec");
         this.map.put(40, "Za pomocą jakiego Filtru, chcesz wyświetlić drinki");
         this.map.put(41, "Wybierz Filtr: ");
-
         this.map.put(20, "Kontynuować wyszukiwanie Y/N?");
-
-        //this.map.put(13, "3 - Wyszukaj Drink");
-
-
-
-
         this.map.put(90, "Miała być cyfra");
         this.map.put(91, "Podaj cyfre, a program w końcu zadziała: ");
         this.map.put(92, "Podałeś niewłaściwy argument");
         this.map.put(93, "Program zakończy swoje działanie");
-
-
         this.map.put(94, "Chcesz uruchomić program jeszcze raz?");
         this.map.put(95, "Wpisz \"1\" jeżeli chcesz tak.");
 /*
@@ -50,7 +37,6 @@ public class MenuPL {
         System.out.print("Credits: Agnieszka Gutowska, Artur Zabiegliński, ");
         System.out.println("Przemysław Pettka, Sandra Kowalska. \n");
 */
-
         return map;
     }
 
