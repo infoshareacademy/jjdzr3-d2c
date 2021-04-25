@@ -15,7 +15,7 @@ public class Main {
         List<Drink> drinks = drinkParser.readFileIntoDrinkRepository().getDrinks();
 
         Menu menu = new Menu();
-        menu.Menu();
+       menu.menu(drinkParser, drinkRepository, drinks);
 
 
 

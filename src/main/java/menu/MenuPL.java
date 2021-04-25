@@ -30,6 +30,12 @@ public class MenuPL {
         this.map.put(93, "Program zakończy swoje działanie");
         this.map.put(94, "Chcesz uruchomić program jeszcze raz?");
         this.map.put(95, "Wpisz \"1\" jeżeli chcesz tak.");
+        this.map.put(30, "Przepraszamy, program nie ma tego filtra: ");
+        this.map.put(31, "Chcesz dodać kolejny Filtr? Y/N?");
+        this.map.put(32, "Który Filtr?: ");
+        this.map.put(33, "Brak Wyników.");
+
+
 /*
         System.out.println("Walcome in project \"Bartender\'s Handybook\" ");
         System.out.println("Created by:");

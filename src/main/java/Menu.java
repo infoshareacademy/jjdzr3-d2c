@@ -14,9 +14,8 @@ import java.util.Scanner;
 public class Menu {
 
 
-    public void Menu() {
+    public void menu(DrinkParser drinkParser,DrinkRepository drinkRepository, List<Drink> drinks) {
         Map<Integer, String> menuMap = new HashMap<>();
-
 
         System.out.println("Walcome in project \"Bartender's Handybook\" ");
         System.out.println("Created by:");
@@ -31,12 +30,12 @@ public class Menu {
         menuChoseLanguage(menuMap);
 
         do {
-            mainMenu(menuMap);
-            program = resetMenu(menuMap);
+            program = mainMenu(menuMap, drinkParser, drinkRepository, drinks, program);
+            if (program) program = resetMenu(menuMap);
         } while (program);
     }
 
-    public Map menuChoseLanguage(Map menuMap) {
+    public void menuChoseLanguage(Map<Integer, String> menuMap) {
         boolean program = true;
         do {
             try {
@@ -59,19 +58,15 @@ public class Menu {
                 }
             }
         } catch (Exception e) {
-            System.out.println(menuMap.get(90));
-            System.out.println(menuMap.get(91));
+                System.out.println("Enter number and app will be work proply: ");
+                System.out.println("Wrong input");
         }
         }while (program);
-        System.out.println(menuMap.get(01));
-        System.out.println(menuMap.get(02));
-        return menuMap;
+        System.out.println(menuMap.get(1));
+        System.out.println(menuMap.get(2));
     }
-    public void mainMenu(Map menuMap) {
+    public boolean mainMenu(Map<Integer, String> menuMap, DrinkParser drinkParser, DrinkRepository drinkRepository, List<Drink> drinks, Boolean program) {
         try {
-            DrinkParser drinkParser = new DrinkParser();
-            DrinkRepository drinkRepository = drinkParser.readFileIntoDrinkRepository();
-            List<Drink> drinks = drinkParser.readFileIntoDrinkRepository().getDrinks();
             System.out.println(menuMap.get(11));    //1 - Wyświetl wszystkie Elementy z Bazy
             System.out.println(menuMap.get(12));    //2 - Wyświetl pojedyńczy losowy element z Bazy
             System.out.println( menuMap.get(13));    //3 - Wyszukaj Drink
@@ -99,20 +94,21 @@ public class Menu {
                         System.out.println(menuMap.get(20));
                         scanner = new Scanner(System.in);
                         String resetSearch = scanner.next();
-                        if (resetSearch.equals("Y") || resetSearch.equals("T")){
-                            searchloop=true;
-                        } else {
-                            searchloop=false;
-                        }}
+                        searchloop= resetSearch.equals("Y") || resetSearch.equals("T");
+                    }
 
                     break;
                 case 4: // Za pomocą jakiego Filtru, chcesz wyświetlić drinki");
                     System.out.println(menuMap.get(40));
                     System.out.println(menuMap.get(41));
                     Filter filter = new Filter();
-                    drinks= filter.Filtr(drinks);
-                    for (Drink drink : drinks){
-                        System.out.println(drink);
+                    drinks= filter.filter(drinks, menuMap);
+                    if (!drinks.isEmpty()) {
+                        for (Drink drink : drinks) {
+                            System.out.println(drink);
+                        }
+                    }else {
+                        System.out.println(menuMap.get(33));
                     }
                     // uruchom filtrowanie
 
@@ -122,6 +118,7 @@ public class Menu {
                 case 6: //6 - Zarządzanie uczestnikami
                     break;
                 case 0:
+                    program = false;
                     break;
                 default:
                     System.out.println(menuMap.get(92));
@@ -132,37 +129,37 @@ public class Menu {
             System.out.println(menuMap.get(90));
             System.out.println(menuMap.get(91));
         }
+        return program;
     }
-    public boolean resetMenu(Map menuMap) {
+    public boolean resetMenu(Map<Integer, String> menuMap) {
         System.out.println(menuMap.get(94));
         System.out.println(menuMap.get(95));
         boolean program = true;
                 try {
             Scanner scanner = new Scanner(System.in);
             int chose = scanner.nextInt();
-            switch (chose) {
-                case 1:
-                    clearScreen();
-                    clrscr();
-                    program = true;
-                    break;
-                case 2:
-                    clearScreen();
-                    clrscr();
-                    program = false;
-                    break;
-                default:
-                    System.out.println(menuMap.get(92));
-                    System.out.println(menuMap.get(93));
-                    break;
-            }
+                    switch (chose) {
+                        case 1 -> {
+                            clearScreen();
+                            //clrscr();
+                            program = true;
+                        }
+                        case 2 -> {
+                            clearScreen();
+                            //clrscr();
+                            program = false;
+                        }
+                        default -> {
+                            System.out.println(menuMap.get(92));
+                            System.out.println(menuMap.get(93));
+                        }
+                    }
         } catch (Exception e) {
             System.out.println(menuMap.get(90));
             System.out.println(menuMap.get(91));
         }
         return program;
     }
-
     public Map<Integer, String> Credits() {
         Map<Integer, String> map = new HashMap<>();
         return map;

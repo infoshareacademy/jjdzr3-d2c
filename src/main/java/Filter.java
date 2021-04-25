@@ -8,7 +8,7 @@ public class Filter {
 
 // Lista wszystkich [elementów] filtrowana per właściwości
     //Wcześniej wykonana lista wszystkich elementów powinna zyskać filtry. Możliwość ograniczania wyników względem kategorii lub właściwości.
-public  List<Drink> Filtr(List<Drink> drinks) {
+public  List<Drink> filter(List<Drink> drinks, Map<Integer, String> menuMap) {
     boolean filtersloop = true;
     System.out.println("T1 - Non alcoholic \\\\ T2 - Alcoholic");
     System.out.println("C1 -Coffee / Tea \\\\ C2 - Cocktail \\\\ C3 - Ordinary Drink \\\\ C4 - Punch / Party Drink \\\\ C5 - Shot ");
@@ -17,8 +17,8 @@ public  List<Drink> Filtr(List<Drink> drinks) {
 
 do {
     Scanner scanner = new Scanner(System.in);
-    String chose = scanner.next();
-    switch (chose) {
+    String choose = scanner.next();
+    switch (choose) {
         case "T1":
             drinks = drinks.stream()
                     .filter(drink -> drink.getDrinkType() == Type.ALKOHOL_FREE)
@@ -111,15 +111,15 @@ do {
                     .collect(Collectors.toList());
             break;
         default:
-            System.out.println("Sorry, program doesn't have this filter: "+chose);
+            System.out.println(menuMap.get(30)+choose);
             break;
     }
-    System.out.println("Chcesz dodać kolejny Filtr? Y/N?");
+    System.out.println(menuMap.get(31));
     scanner = new Scanner(System.in);
-    chose = scanner.next();
-    if (chose.equals("Y") || chose.equals("T")){
+    choose = scanner.next();
+    if (choose.equals("Y") || choose.equals("T")){
         filtersloop=true;
-        System.out.print("Który Filtr?: ");
+        System.out.print(menuMap.get(32));
     } else {
         filtersloop=false;
     }
