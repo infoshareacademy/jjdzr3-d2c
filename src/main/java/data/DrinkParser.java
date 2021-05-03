@@ -18,7 +18,7 @@ public class DrinkParser {
         ObjectMapper objectMapper = new ObjectMapper();
 
       //  Path path = Paths.get("src", "main", "resources", "mDrinks.json");
-        Path path = Paths.get("src", "main", "resources", "mDrinkstest.json");
+        Path path = Paths.get("src", "main", "resources", "onedrink.json");
 
         try {
             File file = path.toFile();

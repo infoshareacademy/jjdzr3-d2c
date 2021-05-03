@@ -15,14 +15,13 @@ public class Main {
         System.out.println("Przemysław Pettka, Sandra Kowalska. \n");
 
         System.out.println("Reading of drinks from json in DrinksRepository");
-        DrinkParser drinkParser = new DrinkParser();
-        DrinkRepository drinkRepository = drinkParser.readFileIntoDrinkRepository();
-
-        for(Drink drink : drinkRepository.getDrinks()) {
-            System.out.println(drink);
-        }
+//        DrinkParser drinkParser = new DrinkParser();
+//        DrinkRepository drinkRepository = drinkParser.readFileIntoDrinkRepository();
+//
+//        for(Drink drink : drinkRepository.getDrinks()) {
+//            System.out.println(drink);
+//        }
         AddDrink.addDrink();
-        Search.search(drinkRepository);
 
 
     }

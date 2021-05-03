@@ -1,4 +1,5 @@
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.util.JSONPObject;
 import com.google.gson.JsonArray;
@@ -102,30 +103,37 @@ public abstract class AddDrink {
                 drink.setDrinkType(Type.ALKOHOL_FREE);
             }
 
+
+            //parsing to json file, add object to file
+//            Path path = Paths.get("src", "main", "resources", "mDrinkstest.json");
+//            ObjectMapper objectMapper = new ObjectMapper();
+//            String objectAsString = null;
+//            try {
+//                objectAsString = objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(drink);
+//                Files.write(new File(String.valueOf(path)).toPath(), Arrays.asList(objectAsString), StandardOpenOption.APPEND);
+//            } catch (JsonProcessingException e) {
+//                e.printStackTrace();
+//            }
+//            System.out.println(objectAsString);
+
+            //lista drinków
             DrinkParser drinkParser = new DrinkParser();
             DrinkRepository drinkRepository = drinkParser.readFileIntoDrinkRepository();
 
+            ObjectMapper OBJECT_MAPPER = new ObjectMapper();
+            List<Drink> listAddDrink = List.of(drink);
+            List<Drink> drinkReadAgain = null;
+            Path path = Paths.get("src", "main", "resources", "onedrink.json");
+            File jsonDrinks = new File(String.valueOf(path));
 
-
-
-            //parsing to json file, add object to file
-            Path path = Paths.get("src", "main", "resources", "mDrinkstest.json");
-            ObjectMapper objectMapper = new ObjectMapper();
-            String objectAsString = null;
-            try {
-                objectAsString = objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(drink);
-                Files.write(new File(String.valueOf(path)).toPath(), Arrays.asList(objectAsString), StandardOpenOption.APPEND);
-            } catch (JsonProcessingException e) {
-                e.printStackTrace();
-            }
-            System.out.println(objectAsString);
-
-
+            drinkRepository.getDrinks().add(drink);
+            OBJECT_MAPPER.writeValue(jsonDrinks, listAddDrink );
+            drinkReadAgain = OBJECT_MAPPER.readValue(jsonDrinks, new TypeReference<List<Drink>>() {
+            });
 
 
         }
 
-
-        }
     }
 
+}
