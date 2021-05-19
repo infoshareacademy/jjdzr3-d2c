@@ -1,8 +1,12 @@
-import data.DrinkParser;
-import domain.Drink;
-import domain.DrinkRepository;
-import menu.MenuEng;
-import menu.MenuPL;
+package com.infoshareademy;
+
+
+import com.infoshareademy.data.DrinkParser;
+import com.infoshareademy.domain.Drink;
+import com.infoshareademy.domain.DrinkRepository;
+import com.infoshareademy.menu.MenuEng;
+import com.infoshareademy.menu.MenuPL;
+
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -14,7 +18,7 @@ import java.util.Scanner;
 public class Menu {
 
 
-    public void menu(DrinkParser drinkParser,DrinkRepository drinkRepository, List<Drink> drinks) {
+    public void menu(DrinkParser drinkParser, DrinkRepository drinkRepository, List<Drink> drinks) {
         Map<Integer, String> menuMap = new HashMap<>();
 
         System.out.println("Walcome in project \"Bartender's Handybook\" ");

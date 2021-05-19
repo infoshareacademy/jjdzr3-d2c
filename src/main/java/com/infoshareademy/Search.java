@@ -1,5 +1,8 @@
-import domain.Drink;
-import domain.DrinkRepository;
+package com.infoshareademy;
+
+
+import com.infoshareademy.domain.Drink;
+import com.infoshareademy.domain.DrinkRepository;
 
 import java.util.List;
 import java.util.Scanner;

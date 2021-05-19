@@ -1,5 +1,4 @@
-package menu;
-
+package com.infoshareademy.menu;
 import java.util.HashMap;
 import java.util.Map;
 

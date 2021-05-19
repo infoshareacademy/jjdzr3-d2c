@@ -1,5 +1,11 @@
-import data.DrinkParser;
-import domain.*;
+package com.infoshareademy;
+
+
+
+import com.infoshareademy.domain.Category;
+import com.infoshareademy.domain.Drink;
+import com.infoshareademy.domain.GlassType;
+import com.infoshareademy.domain.Type;
 
 import java.util.*;
 import java.util.stream.Collectors;
