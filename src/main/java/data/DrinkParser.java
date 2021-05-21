@@ -16,15 +16,12 @@ public class DrinkParser {
 
     public DrinkRepository readFileIntoDrinkRepository() {
         ObjectMapper objectMapper = new ObjectMapper();
-
-      //  Path path = Paths.get("src", "main", "resources", "mDrinks.json");
-        Path path = Paths.get("src", "main", "resources", "onedrink.json");
+        Path path = Paths.get("src", "main", "resources", "mDrinks.json");
 
         try {
             File file = path.toFile();
             DrinkDaoRepository drinks = objectMapper.readValue(file, DrinkDaoRepository.class);
             List<Drink> drinkList = createListOfDrinks(drinks);
-
             return new DrinkRepository(drinkList);
         } catch (IOException e) {
             e.printStackTrace();
@@ -58,8 +55,8 @@ public class DrinkParser {
         return drinkList;
     }
 
-    private static class DrinkDaoRepository {
-        private List<DrinkDAO> drinks;
+    public static class DrinkDaoRepository {
+        private List<DrinkDAO> drinks = new ArrayList<>();
 
         public DrinkDaoRepository() {
         }
@@ -69,4 +66,17 @@ public class DrinkParser {
         }
     }
 
+    public DrinkRepository readNewDataBase() {
+        ObjectMapper objectMapper = new ObjectMapper();
+        Path path = Paths.get("src", "main", "resources", "mDrinkstest.json");
+        try {
+            File file = path.toFile();
+            DrinkRepository listOfDrinks = objectMapper.readValue(file, DrinkRepository.class);
+            List<Drink> drinkList = listOfDrinks.getDrinks();
+            return new DrinkRepository(drinkList);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 }

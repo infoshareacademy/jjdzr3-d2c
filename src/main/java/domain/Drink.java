@@ -2,7 +2,7 @@ package domain;
 
 import java.util.List;
 
-public class Drink {
+public class Drink{
     private Integer drinkId;
     private String drinkName;
     private Category drinkCategory;
