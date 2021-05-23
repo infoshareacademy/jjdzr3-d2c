@@ -1,19 +1,14 @@
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.core.type.TypeReference;
+package management;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 import data.DrinkParser;
 import domain.*;
-
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 import java.util.*;
-
-import static domain.Category.ORDINARY_DRINK;
-import static domain.GlassType.COCKTAIL;
-import static domain.Type.ALKOHOL_FREE;
 
 public class AddDrink {
 
@@ -29,13 +24,13 @@ public class AddDrink {
         String addedName = new Scanner(System.in).nextLine();
         drink.setDrinkName(addedName);
 
-        System.out.println("Enter category: 1 - " + Category.PARTY_DRINK_OR_PUNCH + "; 2- " + ORDINARY_DRINK + "; 3 - " + Category.COCKTAIL + "; 4 - " + Category.COFFEE_OR_TEA +
+        System.out.println("Enter category: 1 - " + Category.PARTY_DRINK_OR_PUNCH + "; 2- " + Category.ORDINARY_DRINK + "; 3 - " + Category.COCKTAIL + "; 4 - " + Category.COFFEE_OR_TEA +
                 "; 5 - " + Category.SHOT);
         Integer number = new Scanner(System.in).nextInt();
         if (number == 1) {
             drink.setDrinkCategory(Category.PARTY_DRINK_OR_PUNCH);
         } else if (number == 2) {
-            drink.setDrinkCategory(ORDINARY_DRINK);
+            drink.setDrinkCategory(Category.ORDINARY_DRINK);
         } else if (number == 3) {
             drink.setDrinkCategory(Category.COCKTAIL);
         } else if (number == 4) {
@@ -44,14 +39,14 @@ public class AddDrink {
             drink.setDrinkCategory(Category.SHOT);
         }
 
-        System.out.println("Enter type of drink glass: 1 - " + GlassType.PINT_GLASS + "; 2 -" + COCKTAIL + "; 3 -" + GlassType.CHAMPAGNE_FLUTE + "; 4 -" + GlassType.SHOT +
+        System.out.println("Enter type of drink glass: 1 - " + GlassType.PINT_GLASS + "; 2 -" + GlassType.COCKTAIL + "; 3 -" + GlassType.CHAMPAGNE_FLUTE + "; 4 -" + GlassType.SHOT +
                 "; 5 -" + GlassType.COFFEE_MUG + "; 6 -" + GlassType.PUNCH + "; 7 -" + GlassType.COLLINS + "; 8 -" + GlassType.COPPER_MUG + "; 9 -" + GlassType.HIGHBALL + "; 10 -" + GlassType.IRISH_COFFEE_CUP +
                 "; 11 -" + GlassType.OLD_FASHIONED);
         Integer choice = new Scanner(System.in).nextInt();
         if (choice == 1) {
             drink.setGlassType(GlassType.PINT_GLASS);
         } else if (choice == 2) {
-            drink.setGlassType(COCKTAIL);
+            drink.setGlassType(GlassType.COCKTAIL);
         } else if (choice == 3) {
             drink.setGlassType(GlassType.CHAMPAGNE_FLUTE);
         } else if (choice == 4) {
@@ -111,20 +106,18 @@ public class AddDrink {
 
         }
 
-        System.out.println("Enter type of an alcohol: 1 - " + ALKOHOL_FREE + " 2 -" + Type.ALKOHOL);
+        System.out.println("Enter type of an alcohol: 1 - " + Type.ALKOHOL_FREE + " 2 -" + Type.ALKOHOL);
         Integer choice1 = new Scanner(System.in).nextInt();
         if (choice1 == 1) {
             drink.setDrinkType(Type.ALKOHOL);
         } else if (choice1 == 2) {
-            drink.setDrinkType(ALKOHOL_FREE);
+            drink.setDrinkType(Type.ALKOHOL_FREE );
         }
 
-        //dodawanie drinka
         Path creatNewJson = Paths.get("src", "main", "resources", "mDrinkstest.json");
         File jsonListaDrinkow = creatNewJson.toFile();
-        //jeśli plik jest niepusty
+
         if (jsonListaDrinkow.length() > 0) {
-            System.out.println("pusty plik?");
             ObjectMapper objectMapper = new ObjectMapper();
             DrinkParser drinkParserWithAddedDrink = new DrinkParser();
             List<Drink> drinkRepositoryWithAddedDrink = drinkParserWithAddedDrink.readNewDataBase().getDrinks();
