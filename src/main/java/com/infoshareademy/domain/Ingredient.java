@@ -1,4 +1,4 @@
-package domain;
+package com.infoshareademy.domain;
 
 public class Ingredient {
     private String ingredientName;

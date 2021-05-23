@@ -1,8 +1,9 @@
-package data;
+package com.infoshareademy.data;
 
-import domain.Category;
-import domain.GlassType;
-import domain.Type;
+
+import com.infoshareademy.domain.Category;
+import com.infoshareademy.domain.GlassType;
+import com.infoshareademy.domain.Type;
 
 public class DrinkDAO {
     private Integer idDrink;

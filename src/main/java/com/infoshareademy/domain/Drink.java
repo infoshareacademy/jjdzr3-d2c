@@ -1,5 +1,4 @@
-package domain;
-
+package com.infoshareademy.domain;
 import java.util.List;
 
 public class Drink{
