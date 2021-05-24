@@ -1,9 +1,10 @@
 package data;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import domain.Drink;
-import domain.DrinkRepository;
-import domain.Ingredient;
+import com.infoshareademy.data.DrinkDAO;
+import com.infoshareademy.domain.Drink;
+import com.infoshareademy.domain.DrinkRepository;
+import com.infoshareademy.domain.Ingredient;
 
 import java.io.File;
 import java.io.IOException;
@@ -57,8 +58,8 @@ public class DrinkParser {
         return drinkList;
     }
 
-    private static class DrinkDaoRepository {
-        private List<DrinkDAO> drinks;
+    public static class DrinkDaoRepository {
+        private List<DrinkDAO> drinks = new ArrayList<>();
 
         public DrinkDaoRepository() {
         }
@@ -66,6 +67,19 @@ public class DrinkParser {
         public List<DrinkDAO> getDrinks() {
             return drinks;
         }
+    }
+    public DrinkRepository readNewDataBase() {
+        ObjectMapper objectMapper = new ObjectMapper();
+        Path path = Paths.get("src", "main", "resources", "mDrinkstest.json");
+        try {
+            File file = path.toFile();
+            DrinkRepository listOfDrinks = objectMapper.readValue(file, DrinkRepository.class);
+            List<Drink> drinkList = listOfDrinks.getDrinks();
+            return new DrinkRepository(drinkList);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
 }

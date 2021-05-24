@@ -1,11 +1,14 @@
 package com.infoshareademy;
 
 
-import com.infoshareademy.data.DrinkParser;
+
 import com.infoshareademy.domain.Drink;
 import com.infoshareademy.domain.DrinkRepository;
 import com.infoshareademy.menu.MenuEng;
 import com.infoshareademy.menu.MenuPL;
+import management.AddDrink;
+import management.DeleteDrink;
+import management.EditDrink;
 
 
 import java.io.IOException;
@@ -18,7 +21,7 @@ import java.util.Scanner;
 public class Menu {
 
 
-    public void menu(DrinkParser drinkParser, DrinkRepository drinkRepository, List<Drink> drinks) {
+    public void menu(data.DrinkParser drinkParser, DrinkRepository drinkRepository, List<Drink> drinks) {
         Map<Integer, String> menuMap = new HashMap<>();
 
         System.out.println("Walcome in project \"Bartender's Handybook\" ");
@@ -69,7 +72,7 @@ public class Menu {
         System.out.println(menuMap.get(1));
         System.out.println(menuMap.get(2));
     }
-    public boolean mainMenu(Map<Integer, String> menuMap, DrinkParser drinkParser, DrinkRepository drinkRepository, List<Drink> drinks, Boolean program) {
+    public boolean mainMenu(Map<Integer, String> menuMap, data.DrinkParser drinkParser, DrinkRepository drinkRepository, List<Drink> drinks, Boolean program) {
         try {
             System.out.println(menuMap.get(11));    //1 - Wyświetl wszystkie Elementy z Bazy
             System.out.println(menuMap.get(12));    //2 - Wyświetl pojedyńczy losowy element z Bazy
@@ -118,6 +121,9 @@ public class Menu {
 
                     break;
                 case 5: // 5 - Zarządzanie elementami
+                    AddDrink.addDrink();
+                    DeleteDrink.searchNameAndDelete();
+                    EditDrink.drinkEdition();
                     break;
                 case 6: //6 - Zarządzanie uczestnikami
                     break;
