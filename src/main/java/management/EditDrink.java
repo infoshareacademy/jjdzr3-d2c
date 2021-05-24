@@ -2,7 +2,6 @@ package management;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.infoshareademy.domain.*;
 import data.DrinkParser;
-
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -28,7 +27,7 @@ public class EditDrink {
         System.out.println(drink1);
         System.out.println("----------------------------------");
 
-        System.out.println("What argument do you want to change?: name, category, glass, instruction, recipe");
+        System.out.println("What argument would you like to change?: name, category, glass, instruction, recipe");
         Scanner skanerForDecision = new Scanner(System.in);
         Scanner scanner2 = new Scanner((System.in));
         String atributToChange = skanerForDecision.nextLine().toLowerCase();
@@ -125,8 +124,6 @@ public class EditDrink {
         } else {
             System.out.println("Nothing was change");
         }
-
-
         ObjectMapper objectMapper = new ObjectMapper();
         Path creatNewJson = Paths.get("src", "main", "resources", "mDrinkstest.json");
         File jsonListaDrinkow = creatNewJson.toFile();
@@ -136,8 +133,19 @@ public class EditDrink {
         jsonListaDrinkow.createNewFile();
         String objectAsString = objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(new DrinkRepository((List<Drink>) listOfDrinks));
         Files.write(new File(String.valueOf(jsonListaDrinkow)).toPath(), Arrays.asList(objectAsString), StandardOpenOption.APPEND);
-
         return drink1;
+    }
 
+    public static DrinkRepository cancelChanges() throws IOException {
+        Drink drink = new Drink();
+        ObjectMapper objectMapper = new ObjectMapper();
+        Path path = Paths.get("src", "main", "resources", "mDrinkstest.json");
+        File drinkList = path.toFile();
+        List<Drink> drinkRepositoryWithAddedDrink = new DrinkParser().readFileIntoDrinkRepository().getDrinks();
+        drinkList.delete();
+        drinkList.createNewFile();
+        String objectAsString = objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(new DrinkRepository((List<Drink>) drinkRepositoryWithAddedDrink));
+        Files.write(new File(String.valueOf(path)).toPath(), Arrays.asList(objectAsString), StandardOpenOption.APPEND);
+        return null;
     }
 }

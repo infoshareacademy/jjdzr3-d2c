@@ -124,10 +124,9 @@ public class AddDrink {
             jsonListaDrinkow.delete();
             jsonListaDrinkow.createNewFile();
             drinkRepositoryWithAddedDrink.add(drink);
-            System.out.println(drinkRepositoryWithAddedDrink);
+            System.out.println("New drink:\n" + drink);
             String objectAsString = objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(new DrinkRepository((List<Drink>) drinkRepositoryWithAddedDrink));
             Files.write(new File(String.valueOf(jsonListaDrinkow)).toPath(), Arrays.asList(objectAsString), StandardOpenOption.APPEND);
-
         } else {
             DrinkParser drinkParser = new DrinkParser();
             List<Drink> drinkRepository = drinkParser.readFileIntoDrinkRepository().getDrinks();

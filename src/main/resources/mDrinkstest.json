@@ -6,13 +6,13 @@
     "glassType" : "Coffee mug",
     "preparationInstruction" : "Brew espresso. In a coffee mug, place 1 teaspoon of unsweetened powdered cocoa, then cover a teaspoon with honey and drizzle it into the cup. Stir while the coffee brews,  this is the fun part. The cocoa seems to coat the honey without mixing, so you get a dusty, sticky mass that looks as though it will never mix. Then all at once, presto! It looks like dark chocolate sauce. Pour hot espresso over the honey,stirring to dissolve. Serve with cream.",
     "ingredients" : [ {
-      "ingredientName" : "sf2",
-      "measure" : "22"
+      "ingredientName" : "Espresso",
+      "measure" : null
     }, {
-      "ingredientName" : "safs",
-      "measure" : "22"
+      "ingredientName" : "Honey",
+      "measure" : "Unsweetened "
     }, {
-      "ingredientName" : null,
+      "ingredientName" : "Cocoa powder",
       "measure" : null
     }, {
       "ingredientName" : null,
@@ -574,166 +574,5 @@
       "measure" : "1"
     } ],
     "drinkType" : "Alcoholic"
-  }, {
-    "drinkId" : 111,
-    "drinkName" : "1",
-    "drinkCategory" : "Punch / Party Drink",
-    "glassType" : "Pint glass",
-    "preparationInstruction" : "1",
-    "ingredients" : [ {
-      "ingredientName" : "1",
-      "measure" : "1"
-    }, {
-      "ingredientName" : null,
-      "measure" : null
-    }, {
-      "ingredientName" : null,
-      "measure" : null
-    }, {
-      "ingredientName" : null,
-      "measure" : null
-    }, {
-      "ingredientName" : null,
-      "measure" : null
-    } ],
-    "drinkType" : "Alcoholic"
-  }, {
-    "drinkId" : 111,
-    "drinkName" : "1",
-    "drinkCategory" : "Punch / Party Drink",
-    "glassType" : "Pint glass",
-    "preparationInstruction" : "1",
-    "ingredients" : [ {
-      "ingredientName" : "1",
-      "measure" : "1"
-    }, {
-      "ingredientName" : null,
-      "measure" : null
-    }, {
-      "ingredientName" : null,
-      "measure" : null
-    }, {
-      "ingredientName" : null,
-      "measure" : null
-    }, {
-      "ingredientName" : null,
-      "measure" : null
-    } ],
-    "drinkType" : "Alcoholic"
-  }, {
-    "drinkId" : 1555,
-    "drinkName" : "1",
-    "drinkCategory" : "Punch / Party Drink",
-    "glassType" : "Pint glass",
-    "preparationInstruction" : "1",
-    "ingredients" : [ {
-      "ingredientName" : "1",
-      "measure" : "1"
-    }, {
-      "ingredientName" : null,
-      "measure" : null
-    }, {
-      "ingredientName" : null,
-      "measure" : null
-    }, {
-      "ingredientName" : null,
-      "measure" : null
-    }, {
-      "ingredientName" : null,
-      "measure" : null
-    } ],
-    "drinkType" : "Alcoholic"
-  }, {
-    "drinkId" : 555,
-    "drinkName" : "555",
-    "drinkCategory" : "Shot",
-    "glassType" : "Coffee Mug",
-    "preparationInstruction" : "dgsd sdgsdg sdg sdg sdg sd",
-    "ingredients" : [ {
-      "ingredientName" : "sdsd",
-      "measure" : "55"
-    }, {
-      "ingredientName" : "sdsds",
-      "measure" : "55"
-    }, {
-      "ingredientName" : "sdsd5",
-      "measure" : "4"
-    }, {
-      "ingredientName" : "sdvs",
-      "measure" : "1"
-    }, {
-      "ingredientName" : "sdasfas",
-      "measure" : "5"
-    } ],
-    "drinkType" : "Alcoholic"
-  }, {
-    "drinkId" : 87,
-    "drinkName" : "4",
-    "drinkCategory" : "Coffee / Tea",
-    "glassType" : "Shot glass",
-    "preparationInstruction" : "4",
-    "ingredients" : [ {
-      "ingredientName" : "4",
-      "measure" : "4"
-    }, {
-      "ingredientName" : "44",
-      "measure" : "44"
-    }, {
-      "ingredientName" : "4",
-      "measure" : "44"
-    }, {
-      "ingredientName" : "4",
-      "measure" : "4"
-    }, {
-      "ingredientName" : null,
-      "measure" : null
-    } ],
-    "drinkType" : null
-  }, {
-    "drinkId" : 4343,
-    "drinkName" : "asfasf",
-    "drinkCategory" : "Shot",
-    "glassType" : "Champagne flute",
-    "preparationInstruction" : "3",
-    "ingredients" : [ {
-      "ingredientName" : "wt33",
-      "measure" : "33"
-    }, {
-      "ingredientName" : "sdg3",
-      "measure" : "33"
-    }, {
-      "ingredientName" : "dgsdgsd",
-      "measure" : "22"
-    }, {
-      "ingredientName" : null,
-      "measure" : null
-    }, {
-      "ingredientName" : null,
-      "measure" : null
-    } ],
-    "drinkType" : "Alcoholic"
-  }, {
-    "drinkId" : 12776,
-    "drinkName" : "Melya",
-    "drinkCategory" : "Coffee / Tea",
-    "glassType" : "Coffee mug",
-    "preparationInstruction" : "Brew espresso. In a coffee mug, place 1 teaspoon of unsweetened powdered cocoa, then cover a teaspoon with honey and drizzle it into the cup. Stir while the coffee brews,  this is the fun part. The cocoa seems to coat the honey without mixing, so you get a dusty, sticky mass that looks as though it will never mix. Then all at once, presto! It looks like dark chocolate sauce. Pour hot espresso over the honey,stirring to dissolve. Serve with cream.",
-    "ingredients" : [ {
-      "ingredientName" : "sf2",
-      "measure" : "22"
-    }, {
-      "ingredientName" : "safs",
-      "measure" : "22"
-    }, {
-      "ingredientName" : null,
-      "measure" : null
-    }, {
-      "ingredientName" : null,
-      "measure" : null
-    }, {
-      "ingredientName" : null,
-      "measure" : null
-    } ],
-    "drinkType" : "Non alcoholic"
   } ]
 }

@@ -17,9 +17,7 @@ public class DrinkParser {
 
     public DrinkRepository readFileIntoDrinkRepository() {
         ObjectMapper objectMapper = new ObjectMapper();
-
         Path path = Paths.get("src", "main", "resources", "mDrinks.json");
-
         try {
             File file = path.toFile();
             DrinkDaoRepository drinks = objectMapper.readValue(file, DrinkDaoRepository.class);
@@ -29,7 +27,6 @@ public class DrinkParser {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
         return null;
     }
 
@@ -68,6 +65,7 @@ public class DrinkParser {
             return drinks;
         }
     }
+
     public DrinkRepository readNewDataBase() {
         ObjectMapper objectMapper = new ObjectMapper();
         Path path = Paths.get("src", "main", "resources", "mDrinkstest.json");
