@@ -1,6 +1,5 @@
 package com.infoshareademy.data;
 
-
 import com.infoshareademy.domain.Category;
 import com.infoshareademy.domain.GlassType;
 import com.infoshareademy.domain.Type;
