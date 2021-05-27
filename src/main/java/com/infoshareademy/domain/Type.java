@@ -1,4 +1,4 @@
-package domain;
+package com.infoshareademy.domain;
 
 
 import com.fasterxml.jackson.annotation.JsonValue;

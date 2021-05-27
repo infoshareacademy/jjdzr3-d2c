@@ -1,9 +1,10 @@
-package data;
+package com.infoshareademy.data;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import domain.Drink;
-import domain.DrinkRepository;
-import domain.Ingredient;
+import com.infoshareademy.domain.Drink;
+import com.infoshareademy.domain.DrinkRepository;
+import com.infoshareademy.domain.Ingredient;
+
 
 import java.io.File;
 import java.io.IOException;
