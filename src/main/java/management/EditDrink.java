@@ -1,7 +1,8 @@
 package management;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.infoshareademy.data.DrinkParser;
 import com.infoshareademy.domain.*;
-import data.DrinkParser;
+
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;

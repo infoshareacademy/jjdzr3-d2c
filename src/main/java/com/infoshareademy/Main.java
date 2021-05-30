@@ -2,9 +2,9 @@ package com.infoshareademy;
 
 
 
+import com.infoshareademy.data.DrinkParser;
 import com.infoshareademy.domain.Drink;
 import com.infoshareademy.domain.DrinkRepository;
-import data.DrinkParser;
 
 import java.util.HashMap;
 import java.util.List;

@@ -1,7 +1,8 @@
 import com.infoshareademy.Search;
+import com.infoshareademy.data.DrinkParser;
 import com.infoshareademy.domain.Drink;
 import com.infoshareademy.domain.DrinkRepository;
-import data.DrinkParser;
+
 
 
 public class Main {
