@@ -4,6 +4,7 @@ package com.infoshareademy;
 import com.infoshareademy.domain.Drink;
 import com.infoshareademy.domain.DrinkRepository;
 
+import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
@@ -29,6 +30,8 @@ public class Search {
     }
 
     public static List<Drink> searchItemsForQuery(DrinkRepository drinkRepository, String input) {
+        if (input.length() < 3) return Collections.emptyList();
+
         List<Drink> filteredDrinks = drinkRepository.getDrinks()
                 .stream()
                 .filter(a -> a.getDrinkName().toLowerCase().contains(input.toLowerCase()))
