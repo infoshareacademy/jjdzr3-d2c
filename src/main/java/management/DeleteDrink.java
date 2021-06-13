@@ -33,7 +33,7 @@ public class DeleteDrink {
             System.out.println("Are you sure you want to remove selected drinks? - Y/N");
             Scanner decisionScanner = new Scanner(System.in);
             String decision = decisionScanner.nextLine().toUpperCase();
-            if (decision == "Y") {
+            if (decision.equals("Y")) {
                 for (Drink i : filteredDrinks) {
                     drinkRepository1.getDrinks().remove(i);
                 }
@@ -46,7 +46,7 @@ public class DeleteDrink {
                 jsonListaDrinkow.createNewFile();
                 String objectAsString = objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(new DrinkRepository((List<Drink>) listOfDrinks));
                 Files.write(new File(String.valueOf(jsonListaDrinkow)).toPath(), Arrays.asList(objectAsString), StandardOpenOption.APPEND);
-            } else if (decision != "Y") {
+            } else if (!decision.equals("Y")) {
                 System.out.println("Operation aboart");
             }
         }
