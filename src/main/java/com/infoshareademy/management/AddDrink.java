@@ -1,4 +1,4 @@
-package management;
+package com.infoshareademy.management;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.infoshareademy.data.DrinkParser;
@@ -114,6 +114,10 @@ public class AddDrink {
         } else if (choice1 == 2) {
             drink.setDrinkType(Type.ALKOHOL_FREE );
         }
+
+        System.out.println("Add url for img");
+        String imgForDrink = new Scanner(System.in).next();
+        drink.setDrinkImg(imgForDrink);
 
         Path creatNewJson = Paths.get("src", "main", "resources", "mDrinkstest.json");
         File jsonListaDrinkow = creatNewJson.toFile();

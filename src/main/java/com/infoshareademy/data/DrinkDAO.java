@@ -21,11 +21,12 @@ public class DrinkDAO {
     private String strMeasure4;
     private String strMeasure5;
     private Type typeAlcohol;
+    private String strDrinkThumb;
 
     public DrinkDAO() {
     }
 
-    public DrinkDAO(Integer idDrink, String strDrink, Category strCategory, GlassType strGlass, String strInstructions, String strIngredient1, String strIngredient2, String strIngredient3, String strIngredient4, String strIngredient5, String strMeasure1, String strMeasure2, String strMeasure3, String strMeasure4, String strMeasure5, Type typeAlcohol) {
+    public DrinkDAO(Integer idDrink, String strDrink, Category strCategory, GlassType strGlass, String strInstructions, String strIngredient1, String strIngredient2, String strIngredient3, String strIngredient4, String strIngredient5, String strMeasure1, String strMeasure2, String strMeasure3, String strMeasure4, String strMeasure5, Type typeAlcohol, String strDrinkThumb) {
         this.idDrink = idDrink;
         this.strDrink = strDrink;
         this.strCategory = strCategory;
@@ -42,6 +43,7 @@ public class DrinkDAO {
         this.strMeasure4 = strMeasure4;
         this.strMeasure5 = strMeasure5;
         this.typeAlcohol = typeAlcohol;
+        this.strDrinkThumb = strDrinkThumb;
     }
 
     @Override
@@ -192,5 +194,13 @@ public class DrinkDAO {
 
     public void setStrMeasure5(String strMeasure5) {
         this.strMeasure5 = strMeasure5;
+    }
+
+    public String getStrDrinkThumb() {
+        return strDrinkThumb;
+    }
+
+    public void setStrDrinkThumb(String strDrinkThumb) {
+        this.strDrinkThumb = strDrinkThumb;
     }
 }

@@ -1,4 +1,4 @@
-package management;
+package com.infoshareademy.management;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.infoshareademy.data.DrinkParser;
