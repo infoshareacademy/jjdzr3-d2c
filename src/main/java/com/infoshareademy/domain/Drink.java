@@ -9,11 +9,13 @@ public class Drink{
     private String preparationInstruction;
     private List<Ingredient> ingredients;
     private Type drinkType;
+    private String drinkImg;
+
 
     public Drink() {
     }
 
-    public Drink(Integer drinkId, String drinkName, Category drinkCategory, GlassType glassType, String preparationInstruction, List<Ingredient> ingredients, Type drinkType) {
+    public Drink(Integer drinkId, String drinkName, Category drinkCategory, GlassType glassType, String preparationInstruction, List<Ingredient> ingredients, Type drinkType, String drinkImg) {
         this.drinkId = drinkId;
         this.drinkName = drinkName;
         this.drinkCategory = drinkCategory;
@@ -21,6 +23,8 @@ public class Drink{
         this.preparationInstruction = preparationInstruction;
         this.ingredients = ingredients;
         this.drinkType = drinkType;
+        this.drinkImg = drinkImg;
+
     }
 
     @Override
@@ -92,4 +96,11 @@ public class Drink{
         return ingredients;
     }
 
+    public String getDrinkImg() {
+        return drinkImg;
+    }
+
+    public void setDrinkImg(String drinkImg) {
+        this.drinkImg = drinkImg;
+    }
 }

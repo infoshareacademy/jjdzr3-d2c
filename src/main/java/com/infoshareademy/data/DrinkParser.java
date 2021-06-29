@@ -46,7 +46,8 @@ public class DrinkParser {
                             drink.getStrGlass(),
                             drink.getStrInstructions(),
                             ingredients,
-                            drink.getTypeAlcohol()
+                            drink.getTypeAlcohol(),
+                            drink.getStrDrinkThumb()
                     )
             );
         }

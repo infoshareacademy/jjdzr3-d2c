@@ -1,4 +1,4 @@
-package management;
+package com.infoshareademy.management;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.infoshareademy.data.DrinkParser;
 import com.infoshareademy.domain.*;
@@ -28,7 +28,7 @@ public class EditDrink {
         System.out.println(drink1);
         System.out.println("----------------------------------");
 
-        System.out.println("What argument would you like to change?: name, category, glass, instruction, recipe");
+        System.out.println("What argument would you like to change?: name, category, glass, instruction, recipe, img");
         Scanner skanerForDecision = new Scanner(System.in);
         Scanner scanner2 = new Scanner((System.in));
         String atributToChange = skanerForDecision.nextLine().toLowerCase();
@@ -121,6 +121,11 @@ public class EditDrink {
                     drink1.setIngredients(ingredients);
                 }
             }
+            System.out.println(drink1);
+        } else if (atributToChange.equals("img")) {
+            System.out.println("Add new name:");
+            String newValue = scanner2.nextLine();
+            drink1.setDrinkImg(newValue);
             System.out.println(drink1);
         } else {
             System.out.println("Nothing was change");
