@@ -1,6 +1,7 @@
 package com.infoshareademy;
 
 
+
 import com.infoshareademy.data.DrinkParser;
 import com.infoshareademy.domain.Drink;
 import com.infoshareademy.domain.DrinkRepository;
@@ -19,10 +20,6 @@ public class Main {
 
         Menu menu = new Menu();
        menu.menu(drinkParser, drinkRepository, drinks);
-
-
-
-
 
     }
 

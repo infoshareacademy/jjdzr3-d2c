@@ -1,7 +1,7 @@
 package com.infoshareademy.domain;
 import java.util.List;
 
-public class Drink {
+public class Drink{
     private Integer drinkId;
     private String drinkName;
     private Category drinkCategory;
@@ -26,17 +26,13 @@ public class Drink {
     @Override
     public String toString() {
         return "Drink{" +
-                "drinkId = " + drinkId +
-                ", drinkName = '" + drinkName + '\'' +
-                ", drinkCategory = '" + drinkCategory + '\'' +
-                ", glassType = '" + glassType + '\'' +
-                ", preparationInstruction = '" + preparationInstruction + '\'' +
-                ", ingredients : ['" + ingredients.get(0) + "', '" +
-                                       ingredients.get(1) + "', '" +
-                                       ingredients.get(2) + "', '" +
-                                       ingredients.get(3) + "', '" +
-                                       ingredients.get(4) + "']" +
-                ", drinkType = '" + drinkType + '\'' +
+                "drinkId=" + drinkId +
+                ", drinkName='" + drinkName + '\'' +
+                ", drinkCategory=" + drinkCategory +
+                ", glassType=" + glassType +
+                ", preparationInstruction='" + preparationInstruction + '\'' +
+                ", ingredients=" + ingredients +
+                ", drinkType=" + drinkType +
                 '}';
     }
 
@@ -86,6 +82,14 @@ public class Drink {
 
     public void setDrinkType(Type drinkType) {
         this.drinkType = drinkType;
+    }
+
+    public void setIngredients(List<Ingredient> ingredients) {
+        this.ingredients = ingredients;
+    }
+
+    public List<Ingredient> getIngredients() {
+        return ingredients;
     }
 
 }

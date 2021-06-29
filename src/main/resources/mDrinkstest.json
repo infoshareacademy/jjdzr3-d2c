@@ -1,0 +1,601 @@
+{
+  "drinks" : [ {
+    "drinkId" : 12776,
+    "drinkName" : "Melya",
+    "drinkCategory" : "Coffee / Tea",
+    "glassType" : "Coffee mug",
+    "preparationInstruction" : "Brew espresso. In a coffee mug, place 1 teaspoon of unsweetened powdered cocoa, then cover a teaspoon with honey and drizzle it into the cup. Stir while the coffee brews,  this is the fun part. The cocoa seems to coat the honey without mixing, so you get a dusty, sticky mass that looks as though it will never mix. Then all at once, presto! It looks like dark chocolate sauce. Pour hot espresso over the honey,stirring to dissolve. Serve with cream.",
+    "ingredients" : [ {
+      "ingredientName" : "Espresso",
+      "measure" : null
+    }, {
+      "ingredientName" : "Honey",
+      "measure" : "Unsweetened "
+    }, {
+      "ingredientName" : "Cocoa powder",
+      "measure" : null
+    }, {
+      "ingredientName" : null,
+      "measure" : null
+    }, {
+      "ingredientName" : null,
+      "measure" : null
+    } ],
+    "drinkType" : "Non alcoholic"
+  }, {
+    "drinkId" : 11000,
+    "drinkName" : "Mojito",
+    "drinkCategory" : "Cocktail",
+    "glassType" : "Highball glass",
+    "preparationInstruction" : "Muddle mint leaves with sugar and lime juice. Add a splash of soda water and fill the glass with cracked ice. Pour the rum and top with soda water. Garnish and serve with straw.",
+    "ingredients" : [ {
+      "ingredientName" : "Light rum",
+      "measure" : "2-3 oz "
+    }, {
+      "ingredientName" : "Lime",
+      "measure" : "Juice of 1 "
+    }, {
+      "ingredientName" : "Sugar",
+      "measure" : "2 tsp "
+    }, {
+      "ingredientName" : "Mint",
+      "measure" : "2-4 "
+    }, {
+      "ingredientName" : "Soda water",
+      "measure" : null
+    } ],
+    "drinkType" : "Alcoholic"
+  }, {
+    "drinkId" : 17205,
+    "drinkName" : "Mimosa",
+    "drinkCategory" : "Ordinary Drink",
+    "glassType" : "Champagne flute",
+    "preparationInstruction" : "Ensure both ingredients are well chilled, then mix into the glass. Serve cold.",
+    "ingredients" : [ {
+      "ingredientName" : "Champagne",
+      "measure" : "Chilled "
+    }, {
+      "ingredientName" : "Orange juice",
+      "measure" : "2 oz "
+    }, {
+      "ingredientName" : null,
+      "measure" : null
+    }, {
+      "ingredientName" : null,
+      "measure" : null
+    }, {
+      "ingredientName" : null,
+      "measure" : null
+    } ],
+    "drinkType" : "Alcoholic"
+  }, {
+    "drinkId" : 11690,
+    "drinkName" : "Mai Tai",
+    "drinkCategory" : "Ordinary Drink",
+    "glassType" : "Collins glass",
+    "preparationInstruction" : "Shake all ingredients with ice. Strain into glass. Garnish and serve with straw.",
+    "ingredients" : [ {
+      "ingredientName" : "Light rum",
+      "measure" : "1 oz "
+    }, {
+      "ingredientName" : "Orgeat syrup",
+      "measure" : "1/2 oz "
+    }, {
+      "ingredientName" : "Triple sec",
+      "measure" : "1/2 oz "
+    }, {
+      "ingredientName" : "Sweet and sour",
+      "measure" : "1 1/2 oz "
+    }, {
+      "ingredientName" : "Cherry",
+      "measure" : "1 "
+    } ],
+    "drinkType" : "Alcoholic"
+  }, {
+    "drinkId" : 11728,
+    "drinkName" : "Martini",
+    "drinkCategory" : "Cocktail",
+    "glassType" : "Cocktail glass",
+    "preparationInstruction" : "Straight: Pour all ingredients into mixing glass with ice cubes. Stir well. Strain in chilled martini cocktail glass. Squeeze oil from lemon peel onto the drink, or garnish with olive.",
+    "ingredients" : [ {
+      "ingredientName" : "Gin",
+      "measure" : "1 2/3 oz "
+    }, {
+      "ingredientName" : "Dry Vermouth",
+      "measure" : "1/3 oz "
+    }, {
+      "ingredientName" : "Olive",
+      "measure" : "1 "
+    }, {
+      "ingredientName" : null,
+      "measure" : null
+    }, {
+      "ingredientName" : null,
+      "measure" : null
+    } ],
+    "drinkType" : "Alcoholic"
+  }, {
+    "drinkId" : 11007,
+    "drinkName" : "Margarita",
+    "drinkCategory" : "Ordinary Drink",
+    "glassType" : "Cocktail glass",
+    "preparationInstruction" : "Rub the rim of the glass with the lime slice to make the salt stick to it. Take care to moisten only the outer rim and sprinkle the salt on it. The salt should present to the lips of the imbiber and never mix into the cocktail. Shake the other ingredients with ice, then carefully pour into the glass.",
+    "ingredients" : [ {
+      "ingredientName" : "Tequila",
+      "measure" : "1 1/2 oz "
+    }, {
+      "ingredientName" : "Triple sec",
+      "measure" : "1/2 oz "
+    }, {
+      "ingredientName" : "Lime juice",
+      "measure" : "1 oz "
+    }, {
+      "ingredientName" : "Salt",
+      "measure" : null
+    }, {
+      "ingredientName" : null,
+      "measure" : null
+    } ],
+    "drinkType" : "Alcoholic"
+  }, {
+    "drinkId" : 11008,
+    "drinkName" : "Manhattan",
+    "drinkCategory" : "Cocktail",
+    "glassType" : "Cocktail glass",
+    "preparationInstruction" : "Stirred over ice, strained into a chilled glass, garnished, and served up.",
+    "ingredients" : [ {
+      "ingredientName" : "Sweet Vermouth",
+      "measure" : "3/4 oz "
+    }, {
+      "ingredientName" : "Bourbon",
+      "measure" : "2 1/2 oz Blended "
+    }, {
+      "ingredientName" : "Angostura bitters",
+      "measure" : "dash "
+    }, {
+      "ingredientName" : "Ice",
+      "measure" : "2 or 3 "
+    }, {
+      "ingredientName" : "Maraschino cherry",
+      "measure" : "1 "
+    } ],
+    "drinkType" : "Alcoholic"
+  }, {
+    "drinkId" : 178343,
+    "drinkName" : "Michelada",
+    "drinkCategory" : "Cocktail",
+    "glassType" : "Pint glass",
+    "preparationInstruction" : "Mix the beer with tomato juice, freshly squeezed lime juice, and Worcestershire sauce, teriyaki sauce, soy sauce, or hot sauce.Served In a chilled, salt-rimmed glass",
+    "ingredients" : [ {
+      "ingredientName" : "Beer",
+      "measure" : "4 oz"
+    }, {
+      "ingredientName" : "Tomato Juice",
+      "measure" : "4 oz"
+    }, {
+      "ingredientName" : "Lime Juice",
+      "measure" : "1 tblsp"
+    }, {
+      "ingredientName" : "Hot Sauce",
+      "measure" : "Dash"
+    }, {
+      "ingredientName" : "Worcestershire Sauce",
+      "measure" : "Dash"
+    } ],
+    "drinkType" : "Alcoholic"
+  }, {
+    "drinkId" : 13936,
+    "drinkName" : "Miami Vice",
+    "drinkCategory" : "Cocktail",
+    "glassType" : "Cocktail glass",
+    "preparationInstruction" : "First: Mix pina colada with 2.5 oz. of rum with ice(set aside). Second: Mix daiquiri with 2.5 oz. of rum with ice. Third: While frozen, add pina colda mix then daiquiri mix in glass (Making sure they do not get mixed together).",
+    "ingredients" : [ {
+      "ingredientName" : "151 proof rum",
+      "measure" : "5 oz Bacardi "
+    }, {
+      "ingredientName" : "Pina colada mix",
+      "measure" : "frozen "
+    }, {
+      "ingredientName" : "Daiquiri mix",
+      "measure" : "frozen "
+    }, {
+      "ingredientName" : null,
+      "measure" : null
+    }, {
+      "ingredientName" : null,
+      "measure" : null
+    } ],
+    "drinkType" : "Alcoholic"
+  }, {
+    "drinkId" : 16041,
+    "drinkName" : "Mudslinger",
+    "drinkCategory" : "Punch / Party Drink",
+    "glassType" : "Punch bowl",
+    "preparationInstruction" : "Add all contents to a large jug or punch bowl. Stir well!",
+    "ingredients" : [ {
+      "ingredientName" : "Southern Comfort",
+      "measure" : "750 ml "
+    }, {
+      "ingredientName" : "Orange juice",
+      "measure" : "1 L "
+    }, {
+      "ingredientName" : "Pepsi Cola",
+      "measure" : "750 ml "
+    }, {
+      "ingredientName" : null,
+      "measure" : null
+    }, {
+      "ingredientName" : null,
+      "measure" : null
+    } ],
+    "drinkType" : "Alcoholic"
+  }, {
+    "drinkId" : 16196,
+    "drinkName" : "Moranguito",
+    "drinkCategory" : "Shot",
+    "glassType" : "Shot glass",
+    "preparationInstruction" : "first you put rhe absinthe, then put tequila, then put the Granadine syrup.",
+    "ingredients" : [ {
+      "ingredientName" : "Absinthe",
+      "measure" : "2/5 "
+    }, {
+      "ingredientName" : "Tequila",
+      "measure" : "2/5 "
+    }, {
+      "ingredientName" : "Grenadine",
+      "measure" : "1/5 "
+    }, {
+      "ingredientName" : null,
+      "measure" : null
+    }, {
+      "ingredientName" : null,
+      "measure" : null
+    } ],
+    "drinkType" : "Alcoholic"
+  }, {
+    "drinkId" : 17206,
+    "drinkName" : "Mint Julep",
+    "drinkCategory" : "Ordinary Drink",
+    "glassType" : "Collins glass",
+    "preparationInstruction" : "In a highball glass gently muddle the mint, sugar and water. Fill the glass with cracked ice, add Bourbon and stir well until the glass is well frosted. Garnish with a mint sprig.",
+    "ingredients" : [ {
+      "ingredientName" : "Mint",
+      "measure" : "4 fresh "
+    }, {
+      "ingredientName" : "Bourbon",
+      "measure" : "2 1/2 oz "
+    }, {
+      "ingredientName" : "Powdered sugar",
+      "measure" : "1 tsp "
+    }, {
+      "ingredientName" : "Water",
+      "measure" : "2 tsp "
+    }, {
+      "ingredientName" : null,
+      "measure" : null
+    } ],
+    "drinkType" : "Alcoholic"
+  }, {
+    "drinkId" : 17256,
+    "drinkName" : "Martinez 2",
+    "drinkCategory" : "Cocktail",
+    "glassType" : "Cocktail glass",
+    "preparationInstruction" : "Add all ingredients to a mixing glass and fill with ice. Stir until chilled, and strain into a chilled coupe glass.",
+    "ingredients" : [ {
+      "ingredientName" : "Gin",
+      "measure" : "1 1/2 oz"
+    }, {
+      "ingredientName" : "Sweet Vermouth",
+      "measure" : "1 1/2 oz"
+    }, {
+      "ingredientName" : "Maraschino Liqueur",
+      "measure" : "1 tsp"
+    }, {
+      "ingredientName" : "Angostura Bitters",
+      "measure" : "2 dashes"
+    }, {
+      "ingredientName" : null,
+      "measure" : null
+    } ],
+    "drinkType" : "Alcoholic"
+  }, {
+    "drinkId" : 12774,
+    "drinkName" : "Masala Chai",
+    "drinkCategory" : "Coffee / Tea",
+    "glassType" : "Coffee Mug",
+    "preparationInstruction" : "Bring 2 cups of water to boil. Add all the ingredients and boil again for about 15 seconds. Let stand for a minute. Warm milk in a pot. Filter tea into cups. Add milk and sugar. That's IT.",
+    "ingredients" : [ {
+      "ingredientName" : "Water",
+      "measure" : "2 cups "
+    }, {
+      "ingredientName" : "Tea",
+      "measure" : "3-4 tsp "
+    }, {
+      "ingredientName" : "Ginger",
+      "measure" : "1 chunk dried "
+    }, {
+      "ingredientName" : "Cardamom",
+      "measure" : "3-4 crushed "
+    }, {
+      "ingredientName" : "Cloves",
+      "measure" : "3 "
+    } ],
+    "drinkType" : "Non alcoholic"
+  }, {
+    "drinkId" : 12988,
+    "drinkName" : "Mulled Wine",
+    "drinkCategory" : "Punch / Party Drink",
+    "glassType" : "Collins Glass",
+    "preparationInstruction" : "Simmer 3 cups water with, sugar, cloves, cinnamon sticks, and lemon peel in a stainless steel pot for 10 minutes. Add wine heat to a \"coffee temperature\" (DO NOT BOIL) then add the brandy.",
+    "ingredients" : [ {
+      "ingredientName" : "Water",
+      "measure" : "3 cups "
+    }, {
+      "ingredientName" : "Sugar",
+      "measure" : "1 cup "
+    }, {
+      "ingredientName" : "Cloves",
+      "measure" : "12 "
+    }, {
+      "ingredientName" : "Cinnamon",
+      "measure" : "2 "
+    }, {
+      "ingredientName" : "Lemon peel",
+      "measure" : "1 "
+    } ],
+    "drinkType" : "Alcoholic"
+  }, {
+    "drinkId" : 11009,
+    "drinkName" : "Moscow Mule",
+    "drinkCategory" : "Punch / Party Drink",
+    "glassType" : "Copper Mug",
+    "preparationInstruction" : "Combine vodka and ginger beer in a highball glass filled with ice. Add lime juice. Stir gently. Garnish.",
+    "ingredients" : [ {
+      "ingredientName" : "Vodka",
+      "measure" : "2 oz "
+    }, {
+      "ingredientName" : "Lime juice",
+      "measure" : "2 oz "
+    }, {
+      "ingredientName" : "Ginger ale",
+      "measure" : "8 oz "
+    }, {
+      "ingredientName" : null,
+      "measure" : null
+    }, {
+      "ingredientName" : null,
+      "measure" : null
+    } ],
+    "drinkType" : "Alcoholic"
+  }, {
+    "drinkId" : 14209,
+    "drinkName" : "Mocha-Berry",
+    "drinkCategory" : "Coffee / Tea",
+    "glassType" : "Irish coffee cup",
+    "preparationInstruction" : "pour 6 oz. of coffee in a mug or Irish coffee cup. add coca mix and chambord, mix well and top off with whipped cream.",
+    "ingredients" : [ {
+      "ingredientName" : "Coffee",
+      "measure" : "6 oz "
+    }, {
+      "ingredientName" : "Chambord raspberry liqueur",
+      "measure" : "2 oz "
+    }, {
+      "ingredientName" : "Cocoa powder",
+      "measure" : "2 tblsp "
+    }, {
+      "ingredientName" : "Whipped cream",
+      "measure" : null
+    }, {
+      "ingredientName" : null,
+      "measure" : null
+    } ],
+    "drinkType" : "Alcoholic"
+  }, {
+    "drinkId" : 178315,
+    "drinkName" : "Munich Mule",
+    "drinkCategory" : "Cocktail",
+    "glassType" : "Highball glass",
+    "preparationInstruction" : "Fill glass with ice Pour Gin and Lime Juice Fill glass with Ginger Beer Garnish with Cucumer and Lime slice",
+    "ingredients" : [ {
+      "ingredientName" : "Gin",
+      "measure" : "5 cl"
+    }, {
+      "ingredientName" : "Lime Juice",
+      "measure" : "2 cl"
+    }, {
+      "ingredientName" : "Ginger Beer",
+      "measure" : "10 cl"
+    }, {
+      "ingredientName" : "Cucumber",
+      "measure" : "Chopped"
+    }, {
+      "ingredientName" : "lemon",
+      "measure" : "Chopped"
+    } ],
+    "drinkType" : "Alcoholic"
+  }, {
+    "drinkId" : 15841,
+    "drinkName" : "Mojito Extra",
+    "drinkCategory" : "Cocktail",
+    "glassType" : "Collins glass",
+    "preparationInstruction" : "Put mint with lemon juice in a glas, mash the mint with a spoon, ice, rum & fill up with club soda. Top it with Angostura.",
+    "ingredients" : [ {
+      "ingredientName" : "Mint",
+      "measure" : "1/2 handful "
+    }, {
+      "ingredientName" : "Lemon juice",
+      "measure" : "3 cl "
+    }, {
+      "ingredientName" : "Dark rum",
+      "measure" : "1/8 L Jamaican "
+    }, {
+      "ingredientName" : "Club soda",
+      "measure" : "1/8 L "
+    }, {
+      "ingredientName" : "Angostura bitters",
+      "measure" : "8 drops "
+    } ],
+    "drinkType" : "Alcoholic"
+  }, {
+    "drinkId" : 17189,
+    "drinkName" : "Monkey Gland",
+    "drinkCategory" : "Ordinary Drink",
+    "glassType" : "Cocktail glass",
+    "preparationInstruction" : "Shake well over ice cubes in a shaker, strain into a chilled cocktail glass.",
+    "ingredients" : [ {
+      "ingredientName" : "Gin",
+      "measure" : "2 oz "
+    }, {
+      "ingredientName" : "Benedictine",
+      "measure" : "1 tsp "
+    }, {
+      "ingredientName" : "Orange juice",
+      "measure" : "1/2 oz "
+    }, {
+      "ingredientName" : "Grenadine",
+      "measure" : "1 tsp "
+    }, {
+      "ingredientName" : null,
+      "measure" : null
+    } ],
+    "drinkType" : "Alcoholic"
+  }, {
+    "drinkId" : 11798,
+    "drinkName" : "Monkey Wrench",
+    "drinkCategory" : "Ordinary Drink",
+    "glassType" : "Old-fashioned glass",
+    "preparationInstruction" : "Pour all of the ingredients into an old-fashioned glass almost filled with ice cubes. Stir well.",
+    "ingredients" : [ {
+      "ingredientName" : "Light rum",
+      "measure" : "1 1/2 oz "
+    }, {
+      "ingredientName" : "Grapefruit juice",
+      "measure" : "3 oz "
+    }, {
+      "ingredientName" : "Bitters",
+      "measure" : "1 dash "
+    }, {
+      "ingredientName" : null,
+      "measure" : null
+    }, {
+      "ingredientName" : null,
+      "measure" : null
+    } ],
+    "drinkType" : "Alcoholic"
+  }, {
+    "drinkId" : 13825,
+    "drinkName" : "Midnight Manx",
+    "drinkCategory" : "Ordinary Drink",
+    "glassType" : "Old-fashioned glass",
+    "preparationInstruction" : "Fill a mixer with ice and add Baileys, Kahlua, Goldshlager, and cream. Shake for 5 seconds and Strain into a double rocks glass filled with ice. Add chilled coffee Stir and enjoy!",
+    "ingredients" : [ {
+      "ingredientName" : "Kahlua",
+      "measure" : "1 oz "
+    }, {
+      "ingredientName" : "Baileys irish cream",
+      "measure" : "1 oz "
+    }, {
+      "ingredientName" : "Goldschlager",
+      "measure" : "dash "
+    }, {
+      "ingredientName" : "Heavy cream",
+      "measure" : "2 oz "
+    }, {
+      "ingredientName" : "Coffee",
+      "measure" : "2 oz Hazlenut "
+    } ],
+    "drinkType" : "Alcoholic"
+  }, {
+    "drinkId" : 14053,
+    "drinkName" : "Mother's Milk",
+    "drinkCategory" : "Shot",
+    "glassType" : "Shot glass",
+    "preparationInstruction" : "Shake over ice, strain. Serves two.",
+    "ingredients" : [ {
+      "ingredientName" : "Goldschlager",
+      "measure" : "1 oz "
+    }, {
+      "ingredientName" : "Butterscotch schnapps",
+      "measure" : "1 oz "
+    }, {
+      "ingredientName" : "Milk",
+      "measure" : "1 oz "
+    }, {
+      "ingredientName" : null,
+      "measure" : null
+    }, {
+      "ingredientName" : null,
+      "measure" : null
+    } ],
+    "drinkType" : "Alcoholic"
+  }, {
+    "drinkId" : 14842,
+    "drinkName" : "Midnight Mint",
+    "drinkCategory" : "Cocktail",
+    "glassType" : "Cocktail glass",
+    "preparationInstruction" : "If available, rim cocktail (Martini) glass with sugar syrup then dip into chocolate flakes or powder. Add ingredients into shaker with ice. Shake well then strain into cocktail glass.",
+    "ingredients" : [ {
+      "ingredientName" : "Baileys irish cream",
+      "measure" : "1 oz "
+    }, {
+      "ingredientName" : "White Creme de Menthe",
+      "measure" : "3/4 oz "
+    }, {
+      "ingredientName" : "Cream",
+      "measure" : "3/4 oz double "
+    }, {
+      "ingredientName" : null,
+      "measure" : null
+    }, {
+      "ingredientName" : null,
+      "measure" : null
+    } ],
+    "drinkType" : "Alcoholic"
+  }, {
+    "drinkId" : 17188,
+    "drinkName" : "Mary Pickford",
+    "drinkCategory" : "Cocktail",
+    "glassType" : "Cocktail glass",
+    "preparationInstruction" : "Shake and strain into a chilled large cocktail glass",
+    "ingredients" : [ {
+      "ingredientName" : "Light rum",
+      "measure" : "1 1/2 oz "
+    }, {
+      "ingredientName" : "Pineapple juice",
+      "measure" : "1 oz "
+    }, {
+      "ingredientName" : "Maraschino liqueur",
+      "measure" : "1/2 tsp "
+    }, {
+      "ingredientName" : "Grenadine",
+      "measure" : "1/2 tsp "
+    }, {
+      "ingredientName" : "Maraschino cherry",
+      "measure" : "1"
+    } ],
+    "drinkType" : "Alcoholic"
+  }, {
+    "drinkId" : 1,
+    "drinkName" : "1",
+    "drinkCategory" : "Punch / Party Drink",
+    "glassType" : "Pint glass",
+    "preparationInstruction" : "1",
+    "ingredients" : [ {
+      "ingredientName" : "1",
+      "measure" : "1"
+    }, {
+      "ingredientName" : null,
+      "measure" : null
+    }, {
+      "ingredientName" : null,
+      "measure" : null
+    }, {
+      "ingredientName" : null,
+      "measure" : null
+    }, {
+      "ingredientName" : null,
+      "measure" : null
+    } ],
+    "drinkType" : "Alcoholic"
+  } ]
+}

@@ -4,6 +4,10 @@ public class Ingredient {
     private String ingredientName;
     private String measure;
 
+    public Ingredient(){
+        super();
+    }
+
     public Ingredient(String ingredientName, String measure) {
         this.ingredientName = ingredientName;
         this.measure = measure;

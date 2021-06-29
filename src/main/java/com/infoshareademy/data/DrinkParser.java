@@ -4,8 +4,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.infoshareademy.domain.Drink;
 import com.infoshareademy.domain.DrinkRepository;
 import com.infoshareademy.domain.Ingredient;
-
-
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Path;
@@ -17,9 +15,7 @@ public class DrinkParser {
 
     public DrinkRepository readFileIntoDrinkRepository() {
         ObjectMapper objectMapper = new ObjectMapper();
-
         Path path = Paths.get("src", "main", "resources", "mDrinks.json");
-
         try {
             File file = path.toFile();
             DrinkDaoRepository drinks = objectMapper.readValue(file, DrinkDaoRepository.class);
@@ -29,7 +25,6 @@ public class DrinkParser {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
         return null;
     }
 
@@ -58,8 +53,8 @@ public class DrinkParser {
         return drinkList;
     }
 
-    private static class DrinkDaoRepository {
-        private List<DrinkDAO> drinks;
+    public static class DrinkDaoRepository {
+        private List<DrinkDAO> drinks = new ArrayList<>();
 
         public DrinkDaoRepository() {
         }
@@ -67,10 +62,20 @@ public class DrinkParser {
         public List<DrinkDAO> getDrinks() {
             return drinks;
         }
-
     }
 
-
-
+    public DrinkRepository readNewDataBase() {
+        ObjectMapper objectMapper = new ObjectMapper();
+        Path path = Paths.get("src", "main", "resources", "mDrinkstest.json");
+        try {
+            File file = path.toFile();
+            DrinkRepository listOfDrinks = objectMapper.readValue(file, DrinkRepository.class);
+            List<Drink> drinkList = listOfDrinks.getDrinks();
+            return new DrinkRepository(drinkList);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 
 }

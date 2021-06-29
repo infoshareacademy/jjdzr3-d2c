@@ -1,13 +1,12 @@
 package com.infoshareademy;
-
-
 import com.infoshareademy.data.DrinkParser;
 import com.infoshareademy.domain.Drink;
 import com.infoshareademy.domain.DrinkRepository;
 import com.infoshareademy.menu.MenuEng;
 import com.infoshareademy.menu.MenuPL;
-
-
+import management.AddDrink;
+import management.DeleteDrink;
+import management.EditDrink;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
@@ -111,6 +110,7 @@ public class Menu {
                         for (Drink drink : drinks) {
                             System.out.println(drink);
                         }
+
                     }else {
                         System.out.println(menuMap.get(33));
                     }
@@ -118,6 +118,17 @@ public class Menu {
 
                     break;
                 case 5: // 5 - Zarządzanie elementami
+                    System.out.println("What would you like to do? 1 - Add new drink, 2 - Remove drink , 3 - Edit drink , 4 - Cancel changes");
+                    scanner = new Scanner(System.in);
+                    Integer managementChoose = scanner.nextInt();
+                    if (managementChoose==1) {AddDrink.addDrink();
+                    }else if(managementChoose==2){
+                    DeleteDrink.searchNameAndDelete();
+                    }else if(managementChoose==3) {
+                        EditDrink.drinkEdition();
+                    }else if(managementChoose==4){
+                        EditDrink.cancelChanges();
+                    }
                     break;
                 case 6: //6 - Zarządzanie uczestnikami
                     break;
