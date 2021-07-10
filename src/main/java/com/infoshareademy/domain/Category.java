@@ -8,7 +8,12 @@ public enum Category {
     ORDINARY_DRINK("Ordinary Drink"),
     PARTY_DRINK_OR_PUNCH("Punch / Party Drink"),
     SHOT("Shot"),
-    OTHER_UNKNOWN ("Other/Unknown");
+    OTHER ("Other/Unknown"),
+    MILK_FLOTAT_SHAKE("Milk / Float / Shake"),
+    BEER ("Beer"),
+    SOFT_DRINK_OR_SODA("Soft Drink / Soda"),
+    LIQUEUR("Liqueur");
+
 
     private final String label;
 
@@ -21,4 +26,9 @@ public enum Category {
         return label;
     }
 
+
+    @Override
+    public String toString() {
+        return super.toString();
     }
+}
