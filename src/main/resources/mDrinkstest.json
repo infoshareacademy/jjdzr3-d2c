@@ -3,7 +3,7 @@
     "drinkId" : 12776,
     "drinkName" : "Melya",
     "drinkCategory" : "Coffee / Tea",
-    "glassType" : "Coffee mug",
+    "glassType" : "Coffee Mug",
     "preparationInstruction" : "Brew espresso. In a coffee mug, place 1 teaspoon of unsweetened powdered cocoa, then cover a teaspoon with honey and drizzle it into the cup. Stir while the coffee brews,  this is the fun part. The cocoa seems to coat the honey without mixing, so you get a dusty, sticky mass that looks as though it will never mix. Then all at once, presto! It looks like dark chocolate sauce. Pour hot espresso over the honey,stirring to dissolve. Serve with cream.",
     "ingredients" : [ {
       "ingredientName" : "Espresso",
@@ -339,7 +339,7 @@
     "drinkId" : 12988,
     "drinkName" : "Mulled Wine",
     "drinkCategory" : "Punch / Party Drink",
-    "glassType" : "Collins Glass",
+    "glassType" : "Collins glass",
     "preparationInstruction" : "Simmer 3 cups water with, sugar, cloves, cinnamon sticks, and lemon peel in a stainless steel pot for 10 minutes. Add wine heat to a \"coffee temperature\" (DO NOT BOIL) then add the brandy.",
     "ingredients" : [ {
       "ingredientName" : "Water",
@@ -647,5 +647,29 @@
     } ],
     "drinkType" : "Alcoholic",
     "drinkImg" : "sdasd"
+  }, {
+    "drinkId" : 1,
+    "drinkName" : "1",
+    "drinkCategory" : "Punch / Party Drink",
+    "glassType" : "Pint glass",
+    "preparationInstruction" : "1",
+    "ingredients" : [ {
+      "ingredientName" : "1",
+      "measure" : "1"
+    }, {
+      "ingredientName" : null,
+      "measure" : null
+    }, {
+      "ingredientName" : null,
+      "measure" : null
+    }, {
+      "ingredientName" : null,
+      "measure" : null
+    }, {
+      "ingredientName" : null,
+      "measure" : null
+    } ],
+    "drinkType" : "Alcoholic",
+    "drinkImg" : "1"
   } ]
 }
