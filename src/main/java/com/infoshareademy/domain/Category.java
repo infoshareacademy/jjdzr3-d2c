@@ -7,7 +7,8 @@ public enum Category {
     COCKTAIL("Cocktail"),
     ORDINARY_DRINK("Ordinary Drink"),
     PARTY_DRINK_OR_PUNCH("Punch / Party Drink"),
-    SHOT("Shot");
+    SHOT("Shot"),
+    OTHER_UNKNOWN ("Other/Unknown");
 
     private final String label;
 
